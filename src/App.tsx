@@ -35,16 +35,16 @@ function App() {
     if (loaded?.solution !== solution) {
       return []
     }
-    const gameWasWon = loaded.guesses
+    const gameWasWon = loaded?.guesses
       .map((guess) => guess.join(''))
       .includes(solution)
     if (gameWasWon) {
       setIsGameWon(true)
     }
-    if (loaded.guesses.length === 6 && !gameWasWon) {
+    if (loaded?.guesses.length === 6 && !gameWasWon) {
       setIsGameLost(true)
     }
-    return loaded.guesses
+    return loaded?.guesses
   })
 
   const TRACKING_ID = CONFIG.googleAnalytics // YOUR_OWN_TRACKING_ID
@@ -133,9 +133,7 @@ function App() {
   return (
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
       <div className="flex w-80 mx-auto items-center mb-8">
-        <h1 className="text-xl grow font-bold">
-          Not Wordle - {CONFIG.language}
-        </h1>
+        <h1 className="text-xl grow font-bold">Wordle48</h1>
         <InformationCircleIcon
           className="h-6 w-6 cursor-pointer"
           onClick={() => setIsInfoModalOpen(true)}

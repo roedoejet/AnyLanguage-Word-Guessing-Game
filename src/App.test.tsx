@@ -11,10 +11,10 @@ test('renders Not Wordle', () => {
 })
 
 test('no surprise characters', () => {
-  let splitWords = WORDS.map((x) =>
-    x.split(ORTHOGRAPHY_PATTERN).filter((x) => x)
+  let splitWords = WORDS.map((x: any) =>
+    x.split(ORTHOGRAPHY_PATTERN).filter((x: any) => x)
   )
-  splitWords.forEach((word) => {
+  splitWords.forEach((word: any) => {
     expect(ORTHOGRAPHY).toEqual(expect.arrayContaining(word))
   })
 })
