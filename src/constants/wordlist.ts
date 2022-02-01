@@ -866,7 +866,7 @@ const ALL_48NAMES = {
   chars10: ['さいーどよこたえれな'],
 }
 
-export const WORDS = ALL_WORDS['chars5']
+export const WORDS = ALL_48NAMES['chars5']
 
 if (CONFIG.normalization) {
   WORDS.forEach((val, i) => (WORDS[i] = val.normalize(CONFIG.normalization)))
