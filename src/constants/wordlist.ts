@@ -1,10 +1,15 @@
 import { CONFIG } from './config'
 import { ALL_48NAMES } from './all48names'
 
-export const WORDS = ALL_48NAMES['6chars'].filter((x: string) => {
+export const WORDS = ALL_48NAMES[CONFIG.wordLength].filter((x: string) => {
   const arr = x.split('')
   const s = new Set(arr)
-  return s.size === arr.length
+  return (
+    s.size === arr.length &&
+    /^[あいうえおかがきぎくぐけげこごさざしじすずせぜそぞただちぢつづってでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろわをん]+$/.test(
+      x
+    )
+  )
 })
 
 if (CONFIG.normalization) {

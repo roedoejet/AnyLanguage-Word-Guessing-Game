@@ -1,6 +1,6 @@
 import { KeyValue } from '../../lib/keyboard'
 import { getStatuses } from '../../lib/statuses'
-import { Key } from './Key'
+import { Key, LowerKey } from './Key'
 import { useEffect } from 'react'
 import { ORTHOGRAPHY } from '../../constants/orthography'
 
@@ -38,6 +38,8 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
   const charStatuses = getStatuses(guesses)
 
   hintChars.forEach((c) => (charStatuses[c] = 'absent'))
+  charStatuses['　'] = 'absent'
+  console.log(solution)
 
   const onClick = (value: KeyValue) => {
     if (value === 'ENTER') {
@@ -73,32 +75,115 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
   return (
     <div>
       <div className="flex justify-center mb-1">
-        {ORTHOGRAPHY.slice(0, Math.floor(ORTHOGRAPHY.length * 0.4)).map(
-          (char) => (
-            <Key value={char} onClick={onClick} status={charStatuses[char]} />
-          )
-        )}
+        {'あかがさざただなはばぱまやゃら'
+          .split('')
+          .reverse()
+          .map((char) => {
+            if (char === 'ゃ') {
+              return (
+                <LowerKey
+                  value={char}
+                  onClick={onClick}
+                  status={charStatuses[char]}
+                />
+              )
+            } else {
+              return (
+                <Key
+                  value={char}
+                  onClick={onClick}
+                  status={charStatuses[char]}
+                />
+              )
+            }
+          })}
       </div>
       <div className="flex justify-center mb-1">
-        {ORTHOGRAPHY.slice(
-          Math.floor(ORTHOGRAPHY.length * 0.4),
-          Math.floor(ORTHOGRAPHY.length * 0.7)
-        ).map((char) => (
-          <Key value={char} onClick={onClick} status={charStatuses[char]} />
-        ))}
+        {'いきぎしじちぢにひびぴみわんり'
+          .split('')
+          .reverse()
+          .map((char) => (
+            <Key value={char} onClick={onClick} status={charStatuses[char]} />
+          ))}
+      </div>
+      <div className="flex justify-center mb-1">
+        {'うくぐすずつづぬふぶぷむゆゅる'
+          .split('')
+          .reverse()
+          .map((char) => {
+            if (char === 'ゅ') {
+              return (
+                <LowerKey
+                  value={char}
+                  onClick={onClick}
+                  status={charStatuses[char]}
+                />
+              )
+            } else {
+              return (
+                <Key
+                  value={char}
+                  onClick={onClick}
+                  status={charStatuses[char]}
+                />
+              )
+            }
+          })}
+      </div>
+      <div className="flex justify-center mb-1">
+        {'えけげせぜてでねへべぺめをっれ'
+          .split('')
+          .reverse()
+          .map((char) => {
+            if (char === 'っ') {
+              return (
+                <LowerKey
+                  value={char}
+                  onClick={onClick}
+                  status={charStatuses[char]}
+                />
+              )
+            } else {
+              return (
+                <Key
+                  value={char}
+                  onClick={onClick}
+                  status={charStatuses[char]}
+                />
+              )
+            }
+          })}
+      </div>
+      <div className="flex justify-center mb-1">
+        {'おこごそぞとどのほぼぽもよょろ'
+          .split('')
+          .reverse()
+          .map((char) => {
+            if (char === 'ょ') {
+              return (
+                <LowerKey
+                  value={char}
+                  onClick={onClick}
+                  status={charStatuses[char]}
+                />
+              )
+            } else {
+              return (
+                <Key
+                  value={char}
+                  onClick={onClick}
+                  status={charStatuses[char]}
+                />
+              )
+            }
+          })}
       </div>
       <div className="flex justify-center">
         <Key width={65.4} value="ENTER" onClick={onClick}>
-          Enter
+          決定
         </Key>
-        {ORTHOGRAPHY.slice(
-          Math.floor(ORTHOGRAPHY.length * 0.7),
-          ORTHOGRAPHY.length
-        ).map((char) => (
-          <Key value={char} onClick={onClick} status={charStatuses[char]} />
-        ))}
         <Key width={65.4} value="DELETE" onClick={onClick}>
-          Delete
+          削除
         </Key>
       </div>
     </div>

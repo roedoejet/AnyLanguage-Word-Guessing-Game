@@ -13,11 +13,12 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
         This is an open source clone of the game Wordle adapted to{' '}
         {CONFIG.language} by{' '}
         <a href={CONFIG.authorWebsite} className="underline font-bold">
-          {CONFIG.author}
+          {CONFIG.author}.
         </a>{' '}
-        - check out{' '}
+        <br />
+        Check out{' '}
         <a
-          href="https://github.com/hannahcode/wordle"
+          href="https://github.com/hannahcode/word-guessing-game"
           className="underline font-bold"
         >
           the original code
@@ -36,8 +37,10 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
         >
           Aidan Pine's fork
         </a>{' '}
-        and customize it for another language! The words for this Wordle were
-        sourced from{' '}
+        and customize it for another language!
+        <br />
+        <br />
+        The words for this Wordle were sourced from{' '}
         <a href={CONFIG.wordListSourceLink} className="underline font-bold">
           {CONFIG.wordListSource}
         </a>

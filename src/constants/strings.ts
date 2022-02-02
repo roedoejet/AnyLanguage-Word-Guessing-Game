@@ -1,1 +1,5 @@
-export const WIN_MESSAGES = ['Great Job!', 'Awesome', 'Well done!']
+export const WIN_MESSAGES = [
+  'すごーい！さすが！',
+  'それです！やったね！',
+  'おおっよく分かったね！',
+]

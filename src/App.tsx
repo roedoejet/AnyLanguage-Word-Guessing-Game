@@ -143,6 +143,9 @@ function App() {
           onClick={() => setIsStatsModalOpen(true)}
         />
       </div>
+      <div className="flex w-80 mx-auto items-center mb-8">
+        <p>{CONFIG.wordLength}文字の48Gのメンバーの名前を当ててね！</p>
+      </div>
       <Grid guesses={guesses} currentGuess={currentGuess} />
       <Keyboard
         onChar={onChar}
@@ -170,7 +173,18 @@ function App() {
         isOpen={isAboutModalOpen}
         handleClose={() => setIsAboutModalOpen(false)}
       />
-
+      {/*
+      <div className="flex w-80 mx-auto items-center mb-8 text-xs">
+      <button type="button" className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-pink-700 bg-pink-100 hover:bg-pink-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 select-none" onClick={() => setIsAboutModalOpen(true)}>AKB48</button>&nbsp;
+      <button type="button" className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-orange-700 bg-orange-100 hover:bg-orange-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 select-none" onClick={() => setIsAboutModalOpen(true)}>SKE48</button>&nbsp;
+      <button type="button" className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-pink-700 bg-pink-100 hover:bg-pink-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 select-none" onClick={() => setIsAboutModalOpen(true)}>NMB48</button>&nbsp;
+      </div>
+      <div className="flex w-80 mx-auto items-center mb-8 text-xs">
+      <button type="button" className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-pink-700 bg-pink-100 hover:bg-pink-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 select-none" onClick={() => setIsAboutModalOpen(true)}>HKT48</button>&nbsp;
+      <button type="button" className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-pink-700 bg-pink-100 hover:bg-pink-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 select-none" onClick={() => setIsAboutModalOpen(true)}>NGT48</button>&nbsp;
+      <button type="button" className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-pink-700 bg-pink-100 hover:bg-pink-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 select-none" onClick={() => setIsAboutModalOpen(true)}>STU48</button>
+      </div>
+*/}
       <button
         type="button"
         className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 select-none"
@@ -179,9 +193,12 @@ function App() {
         About this game
       </button>
 
-      <Alert message="Not enough letters" isOpen={isNotEnoughLetters} />
-      <Alert message="Word not found" isOpen={isWordNotFoundAlertOpen} />
-      <Alert message={`The word was ${solution}`} isOpen={isGameLost} />
+      <Alert message="文字数が足らないよ！" isOpen={isNotEnoughLetters} />
+      <Alert
+        message="そんなメンバーはいないよ！"
+        isOpen={isWordNotFoundAlertOpen}
+      />
+      <Alert message={`正解は「${solution}」でした`} isOpen={isGameLost} />
       <Alert
         message={successAlert}
         isOpen={successAlert !== ''}
