@@ -10,7 +10,7 @@ export const CONFIG = {
   // THESE NEXT SETTINGS ARE FOR ADVANCED USERS
   //
   googleAnalytics: '', // You can use this if you use Google Analytics
-  shuffle: true, // whether to shuffle the words in the wordlist each time you load the app (note: you will lose the 'word of the day' functionality if this is true)
+  shuffle: false, // whether to shuffle the words in the wordlist each time you load the app (note: you will lose the 'word of the day' functionality if this is true)
   normalization: 'NFC', // whether t6o apply Unicode normalization to words and orthography - options: 'NFC', 'NFD', 'NKFC', 'NKFD', false
   hint: 0.3,
   hintForGroup: 0.1,
