@@ -55,6 +55,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
           <li>
             ・最初からグレーになっている文字は答えに含まれません（ヒント用）
           </li>
+          <li>・グループ限定で遊ぶこともできます（画面下ボタンより）</li>
         </ul>
       </p>
     </BaseModal>
