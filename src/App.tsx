@@ -130,22 +130,29 @@ function App() {
       }
     }
   }
+
+  function playGroupGame(e: any) {
+    window.location.href = `./?group=${e.target.textContent}`
+  }
+
   const group_name = URL_PARAMS['group'] || '48G'
-  // const sub_title = (group_name === '48G' ) ? '' : ` (${group_name} ver.)`
+  const sub_title = group_name === '48G' ? '' : `  (${group_name} ver.)`
   return (
-    <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
-      <div className="flex w-80 mx-auto items-center mb-8">
-        <h1 className="text-2xl grow font-bold">Wordle48</h1>
+    <div className="pt-4 pb-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
+      <div className="flex w-80 mx-auto items-center mb-4">
+        <h1 className="text-2xl ml-2.5 grow font-bold">
+          Wordle48<span className="text-lg">{sub_title}</span>
+        </h1>
         <InformationCircleIcon
-          className="h-6 w-6 cursor-pointer"
+          className="h-6 w-6 mr-2 cursor-pointer"
           onClick={() => setIsInfoModalOpen(true)}
         />
         <ChartBarIcon
-          className="h-6 w-6 cursor-pointer"
+          className="h-6 w-6 mr-2 cursor-pointer"
           onClick={() => setIsStatsModalOpen(true)}
         />
       </div>
-      <div className="flex w-80 mx-auto items-center mb-8">
+      <div className="w-90 mb-3 mx-auto text-center mb-6">
         <p>
           {CONFIG.wordLength}文字の{group_name}メンバーの名前を当ててね！
         </p>
@@ -177,18 +184,56 @@ function App() {
         isOpen={isAboutModalOpen}
         handleClose={() => setIsAboutModalOpen(false)}
       />
-      {/*
-      <div className="flex w-80 mx-auto items-center mb-8 text-xs">
-      <button type="button" className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-pink-700 bg-pink-100 hover:bg-pink-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 select-none" onClick={() => setIsAboutModalOpen(true)}>AKB48</button>&nbsp;
-      <button type="button" className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-orange-700 bg-orange-100 hover:bg-orange-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 select-none" onClick={() => setIsAboutModalOpen(true)}>SKE48</button>&nbsp;
-      <button type="button" className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-pink-700 bg-pink-100 hover:bg-pink-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 select-none" onClick={() => setIsAboutModalOpen(true)}>NMB48</button>&nbsp;
+
+      <div className="flex flex-col w-90 mx-auto items-center my-10">
+        <div className="mx-auto mb-2 text-bold text-sm">
+          <p>グループ限定版</p>
+        </div>
+        <div className="flex mx-auto items-center mb-1">
+          <button
+            type="button"
+            className="mx-1 px-2 py-1.5 border border-transparent text-xs font-medium rounded text-pink-700 bg-pink-100 hover:bg-pink-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 select-none"
+            onClick={playGroupGame}
+          >
+            AKB48
+          </button>
+          <button
+            type="button"
+            className="mx-1 px-2 py-1.5 border border-transparent text-xs font-medium rounded text-orange-700 bg-orange-100 hover:bg-orange-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 select-none"
+            onClick={playGroupGame}
+          >
+            SKE48
+          </button>
+          <button
+            type="button"
+            className="mx-1 px-2 py-1.5 border border-transparent text-xs font-medium rounded text-cyan-700 bg-cyan-100 hover:bg-cyan-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 select-none"
+            onClick={playGroupGame}
+          >
+            NMB48
+          </button>
+          <button
+            type="button"
+            className="mx-1 px-2 py-1.5 border border-transparent text-xs font-medium rounded text-slate-50 bg-slate-900 hover:bg-slate-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-500 select-none"
+            onClick={playGroupGame}
+          >
+            HKT48
+          </button>
+          <button
+            type="button"
+            className="mx-1 px-2 py-1.5 border border-transparent text-xs font-medium rounded text-red-800 bg-red-200 hover:bg-red-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-300 select-none"
+            onClick={playGroupGame}
+          >
+            NGT48
+          </button>
+          <button
+            type="button"
+            className="mx-1 px-2 py-1.5 border border-transparent text-xs font-medium rounded text-sky-700 bg-sky-100 hover:bg-sky-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 select-none"
+            onClick={playGroupGame}
+          >
+            STU48
+          </button>
+        </div>
       </div>
-      <div className="flex w-80 mx-auto items-center mb-8 text-xs">
-      <button type="button" className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-pink-700 bg-pink-100 hover:bg-pink-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 select-none" onClick={() => setIsAboutModalOpen(true)}>HKT48</button>&nbsp;
-      <button type="button" className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-pink-700 bg-pink-100 hover:bg-pink-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 select-none" onClick={() => setIsAboutModalOpen(true)}>NGT48</button>&nbsp;
-      <button type="button" className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-pink-700 bg-pink-100 hover:bg-pink-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 select-none" onClick={() => setIsAboutModalOpen(true)}>STU48</button>
-      </div>
-*/}
       <button
         type="button"
         className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 select-none"
