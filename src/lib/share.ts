@@ -1,19 +1,22 @@
 import { getGuessStatuses } from './statuses'
-import { solutionIndex } from './words'
+// import { solutionIndex } from './words'
 import { CONFIG } from '../constants/config'
+import { URL_PARAMS } from './url_params'
 
 export const shareStatus = (guesses: string[][], lost: boolean) => {
-  navigator.clipboard.writeText(
-    CONFIG.language +
-      ' Wordle ' +
-      solutionIndex +
-      ' ' +
-      `${lost ? 'X' : guesses.length}` +
-      '/' +
-      CONFIG.tries.toString() +
-      '\n\n' +
-      generateEmojiGrid(guesses)
-  )
+  const group_name = URL_PARAMS['group'] || 'All 48G'
+  const text =
+    `Wordle48 (${group_name}) ${
+      lost ? 'X' : guesses.length
+    }/${CONFIG.tries.toString()}\n` +
+    `${window.location.href.replace(/\?.*$/, '')}\n\n` +
+    `${generateEmojiGrid(guesses)}`
+
+  if (navigator.share) {
+    return navigator.share({ text: text }).then(() => false)
+  } else {
+    return navigator.clipboard.writeText(text).then(() => true)
+  }
 }
 
 export const generateEmojiGrid = (guesses: string[][]) => {
