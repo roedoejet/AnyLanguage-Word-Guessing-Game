@@ -74,33 +74,20 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
   return (
     <div>
       <div className="flex justify-center mb-1">
-        {'あかがさざただなはばぱまやゃら'
+        {'あかがさざただなはばまやら'
           .split('')
           .reverse()
-          .map((char) => {
-            if (char === 'ゃ') {
-              return (
-                <LowerKey
-                  key={char}
-                  value={char}
-                  onClick={onClick}
-                  status={charStatuses[char]}
-                />
-              )
-            } else {
-              return (
+          .map((char) => (
                 <Key
                   key={char}
                   value={char}
                   onClick={onClick}
                   status={charStatuses[char]}
                 />
-              )
-            }
-          })}
+          ))}
       </div>
       <div className="flex justify-center mb-1">
-        {'いきぎしじちぢにひびぴみわんり'
+        {'いきぎしじちぢにひびみ　り'
           .split('')
           .reverse()
           .map((char) => (
@@ -113,87 +100,59 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
           ))}
       </div>
       <div className="flex justify-center mb-1">
-        {'うくぐすずつづぬふぶぷむゆゅる'
+        {'うくぐすずつづぬふぶむゆる'
           .split('')
           .reverse()
-          .map((char) => {
-            if (char === 'ゅ') {
-              return (
-                <LowerKey
-                  key={char}
-                  value={char}
-                  onClick={onClick}
-                  status={charStatuses[char]}
-                />
-              )
-            } else {
-              return (
+          .map((char) => (
                 <Key
                   key={char}
                   value={char}
                   onClick={onClick}
                   status={charStatuses[char]}
                 />
-              )
-            }
-          })}
+          ))}
       </div>
       <div className="flex justify-center mb-1">
-        {'えけげせぜてでねへべぺめをっれ'
+        {'えけげせぜてでねへべめ　れ'
           .split('')
           .reverse()
-          .map((char) => {
-            if (char === 'っ') {
-              return (
-                <LowerKey
-                  key={char}
-                  value={char}
-                  onClick={onClick}
-                  status={charStatuses[char]}
-                />
-              )
-            } else {
-              return (
+          .map((char) => (
                 <Key
                   key={char}
                   value={char}
                   onClick={onClick}
                   status={charStatuses[char]}
                 />
-              )
-            }
-          })}
+          ))}
       </div>
       <div className="flex justify-center mb-1">
-        {'おこごそぞとどのほぼぽもよょろ'
+        {'おこごそぞとどのほぼもよろ'
           .split('')
           .reverse()
-          .map((char) => {
-            if (char === 'ょ') {
-              return (
-                <LowerKey
-                  key={char}
-                  value={char}
-                  onClick={onClick}
-                  status={charStatuses[char]}
-                />
-              )
-            } else {
-              return (
+          .map((char) => (
                 <Key
                   key={char}
                   value={char}
                   onClick={onClick}
                   status={charStatuses[char]}
                 />
-              )
-            }
-          })}
+          ))}
       </div>
       <div className="flex justify-center">
         <Key width={65.4} key="ENTER" value="ENTER" onClick={onClick}>
           決定
         </Key>
+        {'っょゅゃんをわ'
+          .split('')
+          .reverse()
+          .map((char) => (
+                <LowerKey
+                  key={char}
+                  value={char}
+                  onClick={onClick}
+                  status={charStatuses[char]}
+                />
+          ))}
         <Key width={65.4} key="DELETE" value="DELETE" onClick={onClick}>
           削除
         </Key>
