@@ -21,8 +21,3 @@ div {
     transform: scale(1);
   }
 }
-
-.completed div:not(.shown) {
-  background-color: transparent !important;
-  border-color: rgb(148 163 184 / var(--tw-border-opacity));
-}
