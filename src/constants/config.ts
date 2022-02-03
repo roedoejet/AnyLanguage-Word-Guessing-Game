@@ -1,5 +1,5 @@
 export const CONFIG = {
-  tries: 6, // This changes how many tries you get to finish the wordle
+  tries: 5, // This changes how many tries you get to finish the wordle
   language: 'Japanese 48G members', // This changes the display name for your language
   wordLength: 6, // This sets how long each word is based on how many characters (as defined in orthography.ts) are in each word
   author: '@fronoske', // Put your name here so people know who made this Wordle!

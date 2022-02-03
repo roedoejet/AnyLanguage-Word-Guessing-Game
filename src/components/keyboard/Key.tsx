@@ -37,7 +37,7 @@ export const Key = ({
 
   return (
     <button
-      style={{ width: `${width}px`, height: '58px' }}
+      style={{ width: `${width}px`, height: '42px' }}
       className={classes}
       onClick={handleClick}
     >

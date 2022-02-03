@@ -131,10 +131,11 @@ function App() {
     }
   }
   const group_name = URL_PARAMS['group'] || '48G'
+  // const sub_title = (group_name === '48G' ) ? '' : ` (${group_name} ver.)`
   return (
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
       <div className="flex w-80 mx-auto items-center mb-8">
-        <h1 className="text-xl grow font-bold">Wordle48</h1>
+        <h1 className="text-2xl grow font-bold">Wordle48</h1>
         <InformationCircleIcon
           className="h-6 w-6 cursor-pointer"
           onClick={() => setIsInfoModalOpen(true)}
@@ -144,7 +145,7 @@ function App() {
           onClick={() => setIsStatsModalOpen(true)}
         />
       </div>
-      <div className="flex w-80 mx-auto items-center mb-8 text-sm">
+      <div className="flex w-80 mx-auto items-center mb-8">
         <p>
           {CONFIG.wordLength}文字の{group_name}メンバーの名前を当ててね！
         </p>

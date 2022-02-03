@@ -1,6 +1,6 @@
 import { KeyValue } from '../../lib/keyboard'
 import { getStatuses } from '../../lib/statuses'
-import { Key, LowerKey } from './Key'
+import { Key } from './Key'
 import { useEffect } from 'react'
 import { ORTHOGRAPHY } from '../../constants/orthography'
 
@@ -146,7 +146,7 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
           .split('')
           .reverse()
           .map((char) => (
-                <LowerKey
+                <Key
                   key={char}
                   value={char}
                   onClick={onClick}
