@@ -78,12 +78,12 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
           .split('')
           .reverse()
           .map((char) => (
-                <Key
-                  key={char}
-                  value={char}
-                  onClick={onClick}
-                  status={charStatuses[char]}
-                />
+            <Key
+              key={char}
+              value={char}
+              onClick={onClick}
+              status={charStatuses[char]}
+            />
           ))}
       </div>
       <div className="flex justify-center mb-1">
@@ -104,12 +104,12 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
           .split('')
           .reverse()
           .map((char) => (
-                <Key
-                  key={char}
-                  value={char}
-                  onClick={onClick}
-                  status={charStatuses[char]}
-                />
+            <Key
+              key={char}
+              value={char}
+              onClick={onClick}
+              status={charStatuses[char]}
+            />
           ))}
       </div>
       <div className="flex justify-center mb-1">
@@ -117,12 +117,12 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
           .split('')
           .reverse()
           .map((char) => (
-                <Key
-                  key={char}
-                  value={char}
-                  onClick={onClick}
-                  status={charStatuses[char]}
-                />
+            <Key
+              key={char}
+              value={char}
+              onClick={onClick}
+              status={charStatuses[char]}
+            />
           ))}
       </div>
       <div className="flex justify-center mb-1">
@@ -130,28 +130,28 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
           .split('')
           .reverse()
           .map((char) => (
-                <Key
-                  key={char}
-                  value={char}
-                  onClick={onClick}
-                  status={charStatuses[char]}
-                />
+            <Key
+              key={char}
+              value={char}
+              onClick={onClick}
+              status={charStatuses[char]}
+            />
           ))}
       </div>
       <div className="flex justify-center">
         <Key width={65.4} key="ENTER" value="ENTER" onClick={onClick}>
           決定
         </Key>
-        {'っょゅゃんをわ'
+        {'っょゅゃんわ'
           .split('')
           .reverse()
           .map((char) => (
-                <Key
-                  key={char}
-                  value={char}
-                  onClick={onClick}
-                  status={charStatuses[char]}
-                />
+            <Key
+              key={char}
+              value={char}
+              onClick={onClick}
+              status={charStatuses[char]}
+            />
           ))}
         <Key width={65.4} key="DELETE" value="DELETE" onClick={onClick}>
           削除
