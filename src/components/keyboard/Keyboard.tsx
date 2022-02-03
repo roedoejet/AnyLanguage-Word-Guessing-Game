@@ -6,6 +6,7 @@ import { ORTHOGRAPHY } from '../../constants/orthography'
 
 import { solution } from '../../lib/words'
 import { CONFIG } from '../../constants/config'
+import { URL_PARAMS } from '../../lib/url_params'
 
 type Props = {
   onChar: (value: string) => void
@@ -14,24 +15,22 @@ type Props = {
   guesses: string[][]
 }
 
-function shuffle<T>(array: T[]) {
-  const out = Array.from(array)
-  for (let i = out.length - 1; i > 0; i--) {
-    const r = Math.floor(Math.random() * (i + 1))
-    const tmp = out[i]
-    out[i] = out[r]
-    out[r] = tmp
+function shuffle(array: any[]) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[array[i], array[j]] = [array[j], array[i]]
   }
-  return out
+  return array
 }
+
 // ORTHOGRAPHY のうち solution.split("") にないもののうち CONFIG.hint をあらかじめ absent にする
 // hint が 1 以上ならその数、0～1 なら割合
 const absentChars = ORTHOGRAPHY.filter((e) => !solution.includes(e))
+const hintValue = URL_PARAMS['group'] ? CONFIG.hintForGroup : CONFIG.hint
 const hintNum =
   CONFIG.hint >= 1
-    ? Math.floor(CONFIG.hint)
-    : Math.floor(absentChars.length * CONFIG.hint)
-//  const hintChars = absentChars.sort(_=>Math.random()-0.5).slice(0, hintNum)
+    ? Math.floor(hintValue)
+    : Math.floor(absentChars.length * hintValue)
 const hintChars = shuffle(absentChars).slice(0, hintNum)
 
 export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
@@ -82,6 +81,7 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
             if (char === 'ゃ') {
               return (
                 <LowerKey
+                  key={char}
                   value={char}
                   onClick={onClick}
                   status={charStatuses[char]}
@@ -90,6 +90,7 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
             } else {
               return (
                 <Key
+                  key={char}
                   value={char}
                   onClick={onClick}
                   status={charStatuses[char]}
@@ -103,7 +104,12 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
           .split('')
           .reverse()
           .map((char) => (
-            <Key value={char} onClick={onClick} status={charStatuses[char]} />
+            <Key
+              key={char}
+              value={char}
+              onClick={onClick}
+              status={charStatuses[char]}
+            />
           ))}
       </div>
       <div className="flex justify-center mb-1">
@@ -114,6 +120,7 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
             if (char === 'ゅ') {
               return (
                 <LowerKey
+                  key={char}
                   value={char}
                   onClick={onClick}
                   status={charStatuses[char]}
@@ -122,6 +129,7 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
             } else {
               return (
                 <Key
+                  key={char}
                   value={char}
                   onClick={onClick}
                   status={charStatuses[char]}
@@ -138,6 +146,7 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
             if (char === 'っ') {
               return (
                 <LowerKey
+                  key={char}
                   value={char}
                   onClick={onClick}
                   status={charStatuses[char]}
@@ -146,6 +155,7 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
             } else {
               return (
                 <Key
+                  key={char}
                   value={char}
                   onClick={onClick}
                   status={charStatuses[char]}
@@ -162,6 +172,7 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
             if (char === 'ょ') {
               return (
                 <LowerKey
+                  key={char}
                   value={char}
                   onClick={onClick}
                   status={charStatuses[char]}
@@ -170,6 +181,7 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
             } else {
               return (
                 <Key
+                  key={char}
                   value={char}
                   onClick={onClick}
                   status={charStatuses[char]}
@@ -179,10 +191,10 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
           })}
       </div>
       <div className="flex justify-center">
-        <Key width={65.4} value="ENTER" onClick={onClick}>
+        <Key width={65.4} key="ENTER" value="ENTER" onClick={onClick}>
           決定
         </Key>
-        <Key width={65.4} value="DELETE" onClick={onClick}>
+        <Key width={65.4} key="DELETE" value="DELETE" onClick={onClick}>
           削除
         </Key>
       </div>

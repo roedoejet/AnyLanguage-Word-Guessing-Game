@@ -16,6 +16,7 @@ import {
 } from './lib/localStorage'
 
 import { CONFIG } from './constants/config'
+import { URL_PARAMS } from './lib/url_params'
 import ReactGA from 'react-ga'
 import '@bcgov/bc-sans/css/BCSans.css'
 const ALERT_TIME_MS = 2000
@@ -129,7 +130,7 @@ function App() {
       }
     }
   }
-
+  const group_name = URL_PARAMS['group'] || '48G'
   return (
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
       <div className="flex w-80 mx-auto items-center mb-8">
@@ -143,8 +144,10 @@ function App() {
           onClick={() => setIsStatsModalOpen(true)}
         />
       </div>
-      <div className="flex w-80 mx-auto items-center mb-8">
-        <p>{CONFIG.wordLength}文字の48Gのメンバーの名前を当ててね！</p>
+      <div className="flex w-80 mx-auto items-center mb-8 text-sm">
+        <p>
+          {CONFIG.wordLength}文字の{group_name}メンバーの名前を当ててね！
+        </p>
       </div>
       <Grid guesses={guesses} currentGuess={currentGuess} />
       <Keyboard
@@ -198,7 +201,10 @@ function App() {
         message="そんなメンバーはいないよ！"
         isOpen={isWordNotFoundAlertOpen}
       />
-      <Alert message={`正解は「${solution}」でした`} isOpen={isGameLost} />
+      <Alert
+        message={`残念！ 正解は「${solution}」でした`}
+        isOpen={isGameLost}
+      />
       <Alert
         message={successAlert}
         isOpen={successAlert !== ''}
