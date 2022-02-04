@@ -1,12 +1,12 @@
 import { getGuessStatuses } from './statuses'
 // import { solutionIndex } from './words'
 import { CONFIG } from '../constants/config'
-import { URL_PARAMS } from './url_params'
+import { URL_PARAMS } from './urlParams'
 
 export const shareStatus = (guesses: string[][], lost: boolean) => {
-  const group_name = URL_PARAMS['group'] || 'All 48G'
+  const group_name = URL_PARAMS['group'] || CONFIG.groupName || '48'
   const text =
-    `Wordle48 (${group_name}) ${
+    `Wordle${group_name} ${
       lost ? 'X' : guesses.length
     }/${CONFIG.tries.toString()}\n` +
     `${window.location.href.replace(/\?.*$/, '')}\n\n` +

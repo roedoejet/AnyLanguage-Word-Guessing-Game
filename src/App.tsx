@@ -16,7 +16,7 @@ import {
 } from './lib/localStorage'
 
 import { CONFIG } from './constants/config'
-import { URL_PARAMS } from './lib/url_params'
+import { URL_PARAMS } from './lib/urlParams'
 import ReactGA from 'react-ga'
 import '@bcgov/bc-sans/css/BCSans.css'
 const ALERT_TIME_MS = 2000
@@ -132,17 +132,17 @@ function App() {
   }
 
   function playGroupGame(e: any) {
-    window.location.href = `./?group=${e.target.textContent}`
+    // window.location.href = `./?group=${e.target.textContent}`
+    window.location.href = `../${e.target.textContent
+      .replace(/48$/, '')
+      .toLowerCase()}` // ske, nmb,..., or 48g
   }
 
-  const group_name = URL_PARAMS['group'] || '48G'
-  const sub_title = group_name === '48G' ? '' : `  (${group_name} ver.)`
+  const group_name = URL_PARAMS['group'] || CONFIG.groupName || '48'
   return (
     <div className="pt-4 pb-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
       <div className="flex w-80 mx-auto items-center mb-4">
-        <h1 className="text-2xl ml-2.5 grow font-bold">
-          Wordle48<span className="text-lg">{sub_title}</span>
-        </h1>
+        <h1 className="text-2xl ml-2.5 grow font-bold">Wordle{group_name}</h1>
         <InformationCircleIcon
           className="h-6 w-6 mr-2 cursor-pointer"
           onClick={() => setIsInfoModalOpen(true)}
@@ -187,7 +187,7 @@ function App() {
 
       <div className="flex flex-col w-90 mx-auto items-center my-10">
         <div className="mx-auto mb-2 text-bold text-sm">
-          <p>グループ限定版</p>
+          <p>グループ選択</p>
         </div>
         <div className="flex mx-auto items-center mb-1">
           <button
@@ -231,6 +231,13 @@ function App() {
             onClick={playGroupGame}
           >
             STU48
+          </button>
+          <button
+            type="button"
+            className="mx-1 px-2 py-1.5 border border-transparent text-xs font-medium rounded text-pink-700 bg-pink-100 hover:bg-pink-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 select-none"
+            onClick={playGroupGame}
+          >
+            48G
           </button>
         </div>
       </div>

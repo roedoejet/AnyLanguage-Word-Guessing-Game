@@ -1,6 +1,6 @@
 import { CONFIG } from './config'
 import { ALL_48NAMES } from './all48names'
-import { URL_PARAMS } from '../lib/url_params'
+import { URL_PARAMS } from '../lib/urlParams'
 
 function selectWords(name_with_group: string) {
   const word = name_with_group.replace(/_[A-Z]{3}48$/, '')
@@ -11,8 +11,9 @@ function selectWords(name_with_group: string) {
     /^[あいうえおかがきぎくぐけげこごさざしじすずせぜそぞただちぢつづってでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろわをん]+$/.test(
       word
     )
-  const in_the_group = URL_PARAMS['group']
-    ? name_with_group.includes(URL_PARAMS['group'])
+  const group_name = URL_PARAMS['group'] || CONFIG.groupName
+  const in_the_group = group_name
+    ? name_with_group.includes(group_name)
     : true
   return no_duplicated_chars && all_valid_chars && in_the_group
 }

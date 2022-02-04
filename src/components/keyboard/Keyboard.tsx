@@ -6,7 +6,7 @@ import { ORTHOGRAPHY } from '../../constants/orthography'
 
 import { solution } from '../../lib/words'
 import { CONFIG } from '../../constants/config'
-import { URL_PARAMS } from '../../lib/url_params'
+import { URL_PARAMS } from '../../lib/urlParams'
 
 type Props = {
   onChar: (value: string) => void
@@ -26,7 +26,7 @@ function shuffle(array: any[]) {
 // ORTHOGRAPHY のうち solution.split("") にないもののうち CONFIG.hint をあらかじめ absent にする
 // hint が 1 以上ならその数、0～1 なら割合
 const absentChars = ORTHOGRAPHY.filter((e) => !solution.includes(e))
-const hintValue = URL_PARAMS['group'] ? CONFIG.hintForGroup : CONFIG.hint
+const hintValue = URL_PARAMS['group'] || CONFIG.groupName ? CONFIG.hintForGroup : CONFIG.hint
 const hintNum =
   CONFIG.hint >= 1
     ? Math.floor(hintValue)
