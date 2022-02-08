@@ -1,7 +1,7 @@
 import { CONFIG } from './config'
 
 export const WORDS = [
-   'nʉnʉʉ',
+  'huuba',
   'nitui',
   'yʉʉnʉ',
   'haitsi̠',
@@ -74,8 +74,6 @@ export const WORDS = [
   'kohno',
   'tseena',
   'hʉʉbi',
-  'hayats',
-  'haawaḵ',
   'pihka̠',
   'haaki',
   'ʉmarʉ',
@@ -126,7 +124,7 @@ export const WORDS = [
   'tanua',
   'nʉetʉ',
   'tsiira',
-  'kuitsi̠'',
+  'kuitsi̠',
   'pahmu',
   'manoo',
   'wiyaa',
@@ -173,7 +171,6 @@ export const WORDS = [
   'sinai',
   'kiipʉ̠',
   'koobe',
-  'xsg̱ooḵ',
   'toomo',
   'kuhna̠',
   'nehki̠',
@@ -283,7 +280,7 @@ export const WORDS = [
   'onʔaa',
   'isapʉ̠',
   'mootso',
-  'huuba',
+  'nʉnʉʉ',
   'kooʔi',
   'kweyai',
   'mooka',
