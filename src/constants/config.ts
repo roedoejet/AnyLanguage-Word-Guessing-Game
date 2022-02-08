@@ -1,6 +1,6 @@
 export const CONFIG = {
   tries: 6, // This changes how many tries you get to finish the wordle
-  language: 'Nʉmʉtekwapʉ̠', // This changes the display name for your language
+  language: 'Nʉmʉtekwapʉ', // This changes the display name for your language
   wordLength: 5, // This sets how long each word is based on how many characters (as defined in orthography.ts) are in each word
   author: 'Kate Pewenofkit and CN Language Department', // Put your name here so people know who made this Wordle!
   authorWebsite: 'talkcomanche.org', // Put a link to your website or social media here
