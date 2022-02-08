@@ -119,7 +119,7 @@ export const WORDS = [
   'waapi',
   'eka̠sa',
   'saapʉ',
-  'tatoo,
+  'tatoo',
   'nimai',
   'tanua',
   'nʉetʉ',
