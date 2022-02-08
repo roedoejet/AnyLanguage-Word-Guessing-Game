@@ -59,7 +59,7 @@ export const VALIDGUESSES = [
   'kukaa',
   'kuuna̠',
   'kuutsu',
-  'kʉarʉ',
+  'kʉarʉ,
   'kʉhwʉ',
   'kʉnua',
   'kʉtaa',
