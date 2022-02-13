@@ -48,7 +48,7 @@ Thanks to Carolyn O'Meara (https://github.com/ckomeara) for providing the Spanis
 | Vietnamese | [`Chithanh123/AnyLanguage-Wordle`](https://github.com/Chithanh123/AnyLanguage-Wordle) | [Từ Khóa](https://chithanh123.github.io/AnyLanguage-Wordle/) | |
 | Yiddish | [`alephreish/yiddish-wordle`](https://github.com/alephreish/yiddish-wordle) | [יידיש וואָרדל](https://alephreish.github.io/yiddish-wordle/) | Traditional orthography |
 
-In order to add a derivative version missing from the above list, create a suitable [pull request](https://github.com/roedoejet/AnyLanguage-Wordle/pulls) (edit `README.md`) or contact [Aidan Pine](mailto://hello@aidanpine.ca) (the developer of *AnyLanguage-Wordle*).
+In order to add a derivative version missing from the above list, create a suitable [pull request](https://github.com/roedoejet/AnyLanguage-Wordle/pulls) (edit `README.md`) or contact [Aidan Pine](mailto:hello@aidanpine.ca) (the developer of *AnyLanguage-Wordle*).
 
 For a general list of Wordle-like games in various languages, including the above, see [Wordles of the World](https://rwmpelstilzchen.gitlab.io/wordles/).
 
