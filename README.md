@@ -30,6 +30,28 @@ The interface is translated by default in both English and Spanish - other trans
 
 Thanks to Carolyn O'Meara (https://github.com/ckomeara) for providing the Spanish translation.
 
+
+## Project built upon *AnyLanguage-Wordle*
+
+| Language | Repository | Website | Note |
+| --- | --- | --- | --- |
+| Bardi | [`chirila/Ngaankordle`](https://github.com/chirila/Ngaankordle/) | [Not Wordle — Bardi Ngaanka](https://chirila.github.io/Ngaankordle/) | |
+| Comanche | [`kbridwel/Comanche-NotWordle`](https://github.com/kbridwel/Comanche-NotWordle5) | [Not Wordle — Nʉmʉtekwapʉ̠](https://kbridwel.github.io/Comanche-NotWordle5/) | |
+| Gamilaraay | [`darcy-r/AnyLanguage-Wordl`](https://github.com/darcy-r/AnyLanguage-Wordle) | [Not Wordle — Gamilaraay](https://darcy-r.github.io/AnyLanguage-Wordle/) | |
+| Iñupiaq | [`ilisaqativut/AnyLanguage-Wordle`](https://github.com/ilisaqativut/AnyLanguage-Wordle) | [Not Wordle — Iñupiaq (NS)](https://ilisaqativut.github.io/AnyLanguage-Wordle/) | |
+| Japanese | [`fronoske/wordle48`](https://github.com/fronoske/wordle48) | [Wordle48](https://fronoske.github.io/wordle48/) | [48G](https://jpop.fandom.com/wiki/48G) groups
+| Lineparine | [`Fafsfalira/Lineparine-Wordle`](https://github.com/Fafsfalira/Lineparine-Wordle) | [Not Wordle — Lineparine](https://fafsfalira.github.io/Lineparine-Wordle/) | A conlang |
+| Malecite–Passamaquoddy | [`DiegoBear/Wolastoqey-Wordle`](https://github.com/DiegoBear/Wolastoqey-Wordle) | [Not Wordle — Wolastoqey](https://diegobear.github.io/Wolastoqey-Wordle/) | |
+| Maltese | [`daleschembri/xkelma`](https://github.com/daleschembri/xkelma) | [Not Wordle — Maltese](https://daleschembri.github.io/xkelma/) | Seri | [ckomeara/Seri-Wordle](https://github.com/ckomeara/Seri-Wordle) | [Not Wordle — Seri](https://ckomeara.github.io/Seri-Wordle/) | |
+| Somali | [`SomaliWordle/SomaliWordle.github.io`](https://github.com/SomaliWordle/SomaliWordle.github.io) | [Somali Wordle](https://somaliwordle.github.io/) | |
+| Vietnamese | [`Chithanh123/AnyLanguage-Wordle`](https://github.com/Chithanh123/AnyLanguage-Wordle) | [Từ Khóa](https://chithanh123.github.io/AnyLanguage-Wordle/) | |
+| Yiddish | [`alephreish/yiddish-wordle`](https://github.com/alephreish/yiddish-wordle) | [יידיש וואָרדל](https://alephreish.github.io/yiddish-wordle/) | Traditional orthography |
+
+In order to add a derivative version missing from the above list, create a suitable [pull request](https://github.com/roedoejet/AnyLanguage-Wordle/pulls) (edit `README.md`) or contact [Aidan Pine](mailto://hello@aidanpine.ca) (the developer of *AnyLanguage-Wordle*).
+
+For a general list of Wordle-like games in various languages, including the above, see [Wordles of the World](https://rwmpelstilzchen.gitlab.io/wordles/).
+
+
 ## On to the original stuff from @hannahcode...
 
 - Go play the real Wordle [here](https://www.powerlanguage.co.uk/wordle/)
