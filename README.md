@@ -42,7 +42,8 @@ Thanks to Carolyn O'Meara (https://github.com/ckomeara) for providing the Spanis
 | Japanese | [`fronoske/wordle48`](https://github.com/fronoske/wordle48) | [Wordle48](https://fronoske.github.io/wordle48/) | [48G](https://jpop.fandom.com/wiki/48G) groups
 | Lineparine | [`Fafsfalira/Lineparine-Wordle`](https://github.com/Fafsfalira/Lineparine-Wordle) | [Not Wordle — Lineparine](https://fafsfalira.github.io/Lineparine-Wordle/) | A conlang |
 | Malecite–Passamaquoddy | [`DiegoBear/Wolastoqey-Wordle`](https://github.com/DiegoBear/Wolastoqey-Wordle) | [Not Wordle — Wolastoqey](https://diegobear.github.io/Wolastoqey-Wordle/) | |
-| Maltese | [`daleschembri/xkelma`](https://github.com/daleschembri/xkelma) | [Not Wordle — Maltese](https://daleschembri.github.io/xkelma/) | Seri | [ckomeara/Seri-Wordle](https://github.com/ckomeara/Seri-Wordle) | [Not Wordle — Seri](https://ckomeara.github.io/Seri-Wordle/) | |
+| Maltese | [`daleschembri/xkelma`](https://github.com/daleschembri/xkelma) | [Not Wordle — Maltese](https://daleschembri.github.io/xkelma/) | |
+| Seri | [`ckomeara/Seri-Wordle`](https://github.com/ckomeara/Seri-Wordle) | [Not Wordle — Seri](https://ckomeara.github.io/Seri-Wordle/) | |
 | Somali | [`SomaliWordle/SomaliWordle.github.io`](https://github.com/SomaliWordle/SomaliWordle.github.io) | [Somali Wordle](https://somaliwordle.github.io/) | |
 | Vietnamese | [`Chithanh123/AnyLanguage-Wordle`](https://github.com/Chithanh123/AnyLanguage-Wordle) | [Từ Khóa](https://chithanh123.github.io/AnyLanguage-Wordle/) | |
 | Yiddish | [`alephreish/yiddish-wordle`](https://github.com/alephreish/yiddish-wordle) | [יידיש וואָרדל](https://alephreish.github.io/yiddish-wordle/) | Traditional orthography |
