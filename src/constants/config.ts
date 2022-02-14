@@ -3,7 +3,7 @@ export const CONFIG = {
   language: 'Tunica', // This changes the display name for your language
   wordLength: 5, // This sets how long each word is based on how many characters (as defined in orthography.ts) are in each word
   author: 'PT Anderson', // Put your name here so people know who made this Wordle!
-  authorWebsite: 'YourLinkHere', // Put a link to your website or social media here
+  authorWebsite: 'https://www.linkedin.com/in/pt-patricia-anderson/', // Put a link to your website or social media here
   wordListSource: 'New Tunica Dictionary', // Describe the source material for your words here
   wordListSourceLink: 'https://www.webonary.org/tunica/', // Put a link to the source material for your words here
   //
