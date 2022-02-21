@@ -11,7 +11,9 @@ export const shareStatus = (guesses: string[][], lost: boolean) => {
       '/' +
       CONFIG.tries.toString() +
       '\n\n' +
-      generateEmojiGrid(guesses)
+      generateEmojiGrid(guesses) +
+      '\n\n' +
+      window.location.href
   )
 }
 
