@@ -1,8 +1,11 @@
+import { useContext } from 'react'
+
 import { Cell } from './Cell'
-import { CONFIG } from '../../constants/config'
+import ConfigContext from '../../context/ConfigContext'
 
 export const EmptyRow = () => {
-  const emptyCells = Array.from(Array(CONFIG.wordLength))
+  const languageConfig = useContext(ConfigContext)
+  const emptyCells = Array.from(Array(languageConfig?.wordLength))
 
   return (
     <div className="flex justify-center mb-1">

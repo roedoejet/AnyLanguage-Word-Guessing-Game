@@ -1,9 +1,13 @@
 import Countdown from 'react-countdown'
+import { useContext, useEffect } from 'react'
+
+import ConfigContext from '../../context/ConfigContext'
+
 import { StatBar } from '../stats/StatBar'
 import { Histogram } from '../stats/Histogram'
 import { GameStats } from '../../lib/localStorage'
 import { shareStatus } from '../../lib/share'
-import { tomorrow } from '../../lib/words'
+import { useWordOfTheDay } from '../../lib/words'
 import { BaseModal } from './BaseModal'
 
 type Props = {
@@ -13,6 +17,8 @@ type Props = {
   gameStats: GameStats
   isGameLost: boolean
   isGameWon: boolean
+  solution: string
+  solutionIndex: number
   handleShare: () => void
 }
 
@@ -23,8 +29,14 @@ export const StatsModal = ({
   gameStats,
   isGameLost,
   isGameWon,
+  solution,
+  solutionIndex,
   handleShare,
 }: Props) => {
+
+  const wordOfTheDay = useWordOfTheDay()
+  const languageConfig = useContext(ConfigContext)
+
   if (gameStats.totalGames <= 0) {
     return (
       <BaseModal title="Statistics" isOpen={isOpen} handleClose={handleClose}>
@@ -32,6 +44,7 @@ export const StatsModal = ({
       </BaseModal>
     )
   }
+
   return (
     <BaseModal title="Statistics" isOpen={isOpen} handleClose={handleClose}>
       <StatBar gameStats={gameStats} />
@@ -45,7 +58,7 @@ export const StatsModal = ({
             <h5>New word in</h5>
             <Countdown
               className="text-lg font-medium text-gray-900"
-              date={tomorrow}
+              date={wordOfTheDay?.tomorrow}
               daysInHours={true}
             />
           </div>
@@ -53,7 +66,7 @@ export const StatsModal = ({
             type="button"
             className="mt-2 w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm"
             onClick={() => {
-              shareStatus(guesses, isGameLost)
+              shareStatus(languageConfig?.language, solution, solutionIndex, guesses, isGameLost, languageConfig?.orthographyPattern)
               handleShare()
             }}
           >

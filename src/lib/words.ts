@@ -1,27 +1,37 @@
-import { WORDS } from '../constants/wordlist'
-import { VALIDGUESSES } from '../constants/validGuesses'
+import { useState, useEffect } from 'react'
+import { useLanguageConfig } from '../lib/languageConfig'
 
-export const isWordInWordList = (word: string) => {
-  return WORDS.includes(word) || VALIDGUESSES.includes(word)
-}
+export const useWordOfTheDay = () => {
+  const [solution, setSolution] = useState('');
+  const [solutionIndex, setSolutionIndex] = useState(0);
+  const [tomorrow, setTomorrow] = useState(0);
 
-export const isWinningWord = (word: string) => {
-  return solution === word
-}
+  const languageConfig = useLanguageConfig()
 
-export const getWordOfDay = () => {
-  // January 1, 2022 Game Epoch
-  const epochMs = new Date('January 1, 2022 00:00:00').valueOf()
-  const now = Date.now()
-  const msInDay = 86400000
-  const index = Math.floor((now - epochMs) / msInDay)
-  const nextday = (index + 1) * msInDay + epochMs
+  useEffect((() => {
+    // January 1, 2022 Game Epoch
+    const epochMs = new Date('January 1, 2022 00:00:00').valueOf()
+    const now = Date.now()
+    const msInDay = 86400000
+    const index = Math.floor((now - epochMs) / msInDay)
+    const nextday = (index + 1) * msInDay + epochMs
+
+    setSolution(languageConfig.words[index % languageConfig.words.length])
+    setSolutionIndex(index)
+    setTomorrow(nextday)
+  }), [languageConfig]);
 
   return {
-    solution: WORDS[index % WORDS.length],
-    solutionIndex: index,
-    tomorrow: nextday,
+    solution,
+    solutionIndex,
+    tomorrow
   }
 }
 
-export const { solution, solutionIndex, tomorrow } = getWordOfDay()
+export const isWordInWordList = (words: string[], validGuesses: string[], word: string) => {
+  return words.includes(word) || validGuesses.includes(word)
+}
+
+export const isWinningWord = (solution: string, word: string) => {
+  return solution === word
+}

@@ -1,4 +1,8 @@
+import { useContext } from 'react'
+
 import { getGuessStatuses } from '../../lib/statuses'
+import { useWordOfTheDay } from '../../lib/words'
+import ConfigContext from '../../context/ConfigContext'
 import { MiniCell } from './MiniCell'
 
 type Props = {
@@ -6,7 +10,9 @@ type Props = {
 }
 
 export const MiniCompletedRow = ({ guess }: Props) => {
-  const statuses = getGuessStatuses(guess)
+  const languageConfig = useContext(ConfigContext)
+  const wordOfTheDay = useWordOfTheDay()
+  const statuses = getGuessStatuses(wordOfTheDay?.solution, guess, languageConfig.orthographyPattern)
 
   return (
     <div className="flex justify-center mb-1">

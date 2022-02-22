@@ -1,4 +1,8 @@
-import { CONFIG } from '../../constants/config'
+// Adopt: https://reactjs.org/docs/context.html
+
+import { useContext } from 'react'
+import ConfigContext from '../../context/ConfigContext'
+
 import { BaseModal } from './BaseModal'
 
 type Props = {
@@ -7,13 +11,14 @@ type Props = {
 }
 
 export const AboutModal = ({ isOpen, handleClose }: Props) => {
+  const languageConfig = useContext(ConfigContext)
   return (
     <BaseModal title="About" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-gray-500">
         This is an open source clone of the game Wordle adapted to{' '}
-        {CONFIG.language} by{' '}
-        <a href={CONFIG.authorWebsite} className="underline font-bold">
-          {CONFIG.author}
+        {languageConfig?.language} by{' '}
+        <a href={languageConfig?.authorWebsite} className="underline font-bold">
+          {languageConfig?.author}
         </a>{' '}
         - check out{' '}
         <a
@@ -38,8 +43,8 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
         </a>{' '}
         and customize it for another language! The words for this Wordle were
         sourced from{' '}
-        <a href={CONFIG.wordListSourceLink} className="underline font-bold">
-          {CONFIG.wordListSource}
+        <a href={languageConfig?.wordListSourceLink} className="underline font-bold">
+          {languageConfig?.wordListSource}
         </a>
         . Or,
         {' you can also '}

@@ -1,6 +1,8 @@
+import { useState, useEffect, ChangeEvent, useMemo, useContext } from 'react'
+
+import { ConfigContext } from './context/ConfigContext'
 import { InformationCircleIcon } from '@heroicons/react/outline'
 import { ChartBarIcon } from '@heroicons/react/outline'
-import { useState, useEffect } from 'react'
 import { Alert } from './components/alerts/Alert'
 import { Grid } from './components/grid/Grid'
 import { Keyboard } from './components/keyboard/Keyboard'
@@ -8,19 +10,23 @@ import { AboutModal } from './components/modals/AboutModal'
 import { InfoModal } from './components/modals/InfoModal'
 import { StatsModal } from './components/modals/StatsModal'
 import { WIN_MESSAGES } from './constants/strings'
-import { isWordInWordList, isWinningWord, solution } from './lib/words'
+import { isWordInWordList, isWinningWord, useWordOfTheDay } from './lib/words'
 import { addStatsForCompletedGame, loadStats } from './lib/stats'
+import { useLanguageConfig } from './lib/languageConfig'
+
 import {
   loadGameStateFromLocalStorage,
   saveGameStateToLocalStorage,
 } from './lib/localStorage'
 
-import { CONFIG } from './constants/config'
-import ReactGA from 'react-ga'
+import { SETTINGS } from './constants/settings'
+
 import '@bcgov/bc-sans/css/BCSans.css'
 const ALERT_TIME_MS = 2000
 
 function App() {
+  const languageConfig = useLanguageConfig()
+  const wordOfTheDay = useWordOfTheDay()
   const [currentGuess, setCurrentGuess] = useState<Array<string>>([])
   const [isGameWon, setIsGameWon] = useState(false)
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
@@ -32,12 +38,12 @@ function App() {
   const [successAlert, setSuccessAlert] = useState('')
   const [guesses, setGuesses] = useState<string[][]>(() => {
     const loaded = loadGameStateFromLocalStorage()
-    if (loaded?.solution !== solution) {
+    if (loaded?.solution !== wordOfTheDay?.solution) {
       return []
     }
     const gameWasWon = loaded.guesses
       .map((guess) => guess.join(''))
-      .includes(solution)
+      .includes(wordOfTheDay?.solution)
     if (gameWasWon) {
       setIsGameWon(true)
     }
@@ -47,17 +53,12 @@ function App() {
     return loaded.guesses
   })
 
-  const TRACKING_ID = CONFIG.googleAnalytics // YOUR_OWN_TRACKING_ID
-
-  if (TRACKING_ID && process.env.NODE_ENV !== 'test') {
-    ReactGA.initialize(TRACKING_ID)
-    ReactGA.pageview(window.location.pathname)
-  }
   const [stats, setStats] = useState(() => loadStats())
 
   useEffect(() => {
-    saveGameStateToLocalStorage({ guesses, solution })
-  }, [guesses])
+    saveGameStateToLocalStorage({ guesses, solution: wordOfTheDay?.solution })
+    console.log(wordOfTheDay)
+  }, [guesses, wordOfTheDay])
 
   useEffect(() => {
     if (isGameWon) {
@@ -78,8 +79,8 @@ function App() {
 
   const onChar = (value: string) => {
     if (
-      currentGuess.length < CONFIG.wordLength &&
-      guesses.length < CONFIG.tries &&
+      currentGuess.length < languageConfig.wordLength &&
+      guesses.length < SETTINGS.tries &&
       !isGameWon
     ) {
       let newGuess = currentGuess.concat([value])
@@ -95,24 +96,33 @@ function App() {
     if (isGameWon || isGameLost) {
       return
     }
-    if (!(currentGuess.length === CONFIG.wordLength)) {
+    if (!(currentGuess.length === languageConfig.wordLength)) {
       setIsNotEnoughLetters(true)
       return setTimeout(() => {
         setIsNotEnoughLetters(false)
       }, ALERT_TIME_MS)
     }
 
-    if (!isWordInWordList(currentGuess.join(''))) {
+    if (
+      !isWordInWordList(
+        languageConfig.words,
+        languageConfig.validGuesses,
+        currentGuess.join('')
+      )
+    ) {
       setIsWordNotFoundAlertOpen(true)
       return setTimeout(() => {
         setIsWordNotFoundAlertOpen(false)
       }, ALERT_TIME_MS)
     }
-    const winningWord = isWinningWord(currentGuess.join(''))
+    const winningWord = isWinningWord(
+      wordOfTheDay?.solution,
+      currentGuess.join('')
+    )
 
     if (
-      currentGuess.length === CONFIG.wordLength &&
-      guesses.length < CONFIG.tries &&
+      currentGuess.length === languageConfig.wordLength &&
+      guesses.length < SETTINGS.tries &&
       !isGameWon
     ) {
       setGuesses([...guesses, currentGuess])
@@ -123,73 +133,134 @@ function App() {
         return setIsGameWon(true)
       }
 
-      if (guesses.length === CONFIG.tries - 1) {
+      if (guesses.length === SETTINGS.tries - 1) {
         setStats(addStatsForCompletedGame(stats, guesses.length + 1))
         setIsGameLost(true)
       }
     }
   }
 
+  const onLanguageSwitch = (e: ChangeEvent<HTMLSelectElement>) => {
+    e.preventDefault()
+
+    const selectedValue = e.target.value
+
+    if (selectedValue === 'none') {
+      return
+    }
+
+    window.history.pushState(
+      '',
+      '',
+      `${window.location.pathname}?language=${selectedValue}`
+    )
+    languageConfig.setGameConfigUpdated(true)
+  }
+
   return (
-    <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
-      <div className="flex w-80 mx-auto items-center mb-8">
-        <h1 className="text-xl grow font-bold">
-          Not Wordle - {CONFIG.language}
-        </h1>
-        <InformationCircleIcon
-          className="h-6 w-6 cursor-pointer"
-          onClick={() => setIsInfoModalOpen(true)}
+    <ConfigContext.Provider value={languageConfig}>
+      <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div className="flex w-80 mx-auto items-center mb-8">
+          <h1 className="text-xl grow font-bold">{languageConfig.language}</h1>
+          <InformationCircleIcon
+            className="h-6 w-6 cursor-pointer"
+            onClick={() => setIsInfoModalOpen(true)}
+          />
+          <ChartBarIcon
+            className="h-6 w-6 cursor-pointer"
+            onClick={() => setIsStatsModalOpen(true)}
+          />
+        </div>
+        <Grid
+          guesses={guesses}
+          solution={wordOfTheDay?.solution}
+          currentGuess={currentGuess}
         />
-        <ChartBarIcon
-          className="h-6 w-6 cursor-pointer"
-          onClick={() => setIsStatsModalOpen(true)}
+        <Keyboard
+          onChar={onChar}
+          onDelete={onDelete}
+          onEnter={onEnter}
+          guesses={guesses}
+          solution={wordOfTheDay?.solution}
         />
+        <InfoModal
+          isOpen={isInfoModalOpen}
+          handleClose={() => setIsInfoModalOpen(false)}
+        />
+        <StatsModal
+          isOpen={isStatsModalOpen}
+          handleClose={() => setIsStatsModalOpen(false)}
+          guesses={guesses}
+          gameStats={stats}
+          isGameLost={isGameLost}
+          isGameWon={isGameWon}
+          solution={wordOfTheDay?.solution}
+          solutionIndex={wordOfTheDay?.solutionIndex}
+          handleShare={() => {
+            setSuccessAlert('Game copied to clipboard')
+            return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
+          }}
+        />
+        <AboutModal
+          isOpen={isAboutModalOpen}
+          handleClose={() => setIsAboutModalOpen(false)}
+        />
+
+        <div className="flex items-center border-t-2 mt-6">
+          <button
+            type="button"
+            className="mx-auto mt-8 mr-8 px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 select-none"
+            onClick={() => setIsAboutModalOpen(true)}
+          >
+            About this game
+          </button>
+
+          <select
+            className="mx-auto mt-8 px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 select-none"
+            onChange={onLanguageSwitch}
+          >
+            <option value="none">Select a Language:</option>
+
+            {SETTINGS.allowedSites.map((v) => {
+              let selected = false
+              if (v.id === languageConfig.languageId) {
+                selected = true
+              }
+              return (
+                <option
+                  key={`language-${v.id}`}
+                  value={v.id}
+                  selected={selected}
+                >
+                  {v.label}
+                </option>
+              )
+            })}
+          </select>
+        </div>
+
+        <Alert message="Not enough letters" isOpen={isNotEnoughLetters} />
+        <Alert message="Word not found" isOpen={isWordNotFoundAlertOpen} />
+        <Alert
+          message={`The word was ${wordOfTheDay?.solution}`}
+          isOpen={isGameLost}
+        />
+        <Alert
+          message={successAlert}
+          isOpen={successAlert !== ''}
+          variant="success"
+        />
+        <br />
+        {JSON.stringify(languageConfig?.orthography)}
+        <br />
+        {wordOfTheDay?.solution}
+        <br />
+        {JSON.stringify(languageConfig?.words)}
+        <br />
+        {JSON.stringify(languageConfig?.validGuesses)}
+        <br />
       </div>
-      <Grid guesses={guesses} currentGuess={currentGuess} />
-      <Keyboard
-        onChar={onChar}
-        onDelete={onDelete}
-        onEnter={onEnter}
-        guesses={guesses}
-      />
-      <InfoModal
-        isOpen={isInfoModalOpen}
-        handleClose={() => setIsInfoModalOpen(false)}
-      />
-      <StatsModal
-        isOpen={isStatsModalOpen}
-        handleClose={() => setIsStatsModalOpen(false)}
-        guesses={guesses}
-        gameStats={stats}
-        isGameLost={isGameLost}
-        isGameWon={isGameWon}
-        handleShare={() => {
-          setSuccessAlert('Game copied to clipboard')
-          return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
-        }}
-      />
-      <AboutModal
-        isOpen={isAboutModalOpen}
-        handleClose={() => setIsAboutModalOpen(false)}
-      />
-
-      <button
-        type="button"
-        className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 select-none"
-        onClick={() => setIsAboutModalOpen(true)}
-      >
-        About this game
-      </button>
-
-      <Alert message="Not enough letters" isOpen={isNotEnoughLetters} />
-      <Alert message="Word not found" isOpen={isWordNotFoundAlertOpen} />
-      <Alert message={`The word was ${solution}`} isOpen={isGameLost} />
-      <Alert
-        message={successAlert}
-        isOpen={successAlert !== ''}
-        variant="success"
-      />
-    </div>
+    </ConfigContext.Provider>
   )
 }
 

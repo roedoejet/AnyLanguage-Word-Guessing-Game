@@ -1,0 +1,11 @@
+{
+    "wordLength": 5, 
+    "orthography": ["o'", "a'", "kw", "qw", "e'", "i'", "u'", "j", "o", "l", "p", "u", "q", "k", "i", "Ɨ", "y", "t", "a", "w", "e", "n", "s", "m"], 
+    "words": ["welei", "inaqn", "kitpu", "ne'te'k", "wa'so'q", "nijan", "jakej", "a'tlai", "katew", "mekwe'k", "te'plj", "wele'k", "pesaq", "na'tel", "mia'wj", "nepay", "a'kwesn", "jujij", "wape'k", "tu'aqn", "kilew", "po'qji", "nitap", "npo'qn", "piskwa'", "epa'si", "kelnm", "plamu", "nkumi", "tmaqn", "eptek", "lno'qm", "alukk", "nespi", "ewne'k", "piley", "ninen", "putƗp", "wije's", "pu'tay", "kujim", "kopit", "sisku", "msiku", "nilnu", "stoqn", "a'papi", "wi'ke'n", "nsiskw", "sisip", "na'kwek", "aja'tu"], 
+    "validGuesses": ["welei", "inaqn", "kitpu", "ne'te'k", "wa'so'q", "nijan", "jakej", "a'tlai", "katew", "mekwe'k", "te'plj", "wele'k", "pesaq", "na'tel", "mia'wj", "nepay", "a'kwesn", "jujij", "wape'k", "tu'aqn", "kilew", "po'qji", "nitap", "npo'qn", "piskwa'", "epa'si", "kelnm", "plamu", "nkumi", "tmaqn", "eptek", "lno'qm", "alukk", "nespi", "ewne'k", "piley", "ninen", "putƗp", "wije's", "pu'tay", "kujim", "kopit", "sisku", "msiku", "nilnu", "stoqn", "a'papi", "wi'ke'n", "nsiskw", "sisip", "na'kwek", "aja'tu"], 
+    "language": "Nisga'a", 
+    "languageId": "nisgaa",
+    "author": "FirstVoices", 
+    "authorWebsite": "https://www.firstvoices.com/", 
+    "wordListSource": "The Mi'kmaw Dictionary on FirstVoices"
+}

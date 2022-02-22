@@ -1,18 +1,22 @@
+import { useEffect, useContext } from 'react'
+
 import { KeyValue } from '../../lib/keyboard'
 import { getStatuses } from '../../lib/statuses'
 import { Key } from './Key'
-import { useEffect } from 'react'
-import { ORTHOGRAPHY } from '../../constants/orthography'
+
+import ConfigContext from '../../context/ConfigContext'
 
 type Props = {
   onChar: (value: string) => void
   onDelete: () => void
   onEnter: () => void
   guesses: string[][]
+  solution: string
 }
 
-export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
-  const charStatuses = getStatuses(guesses)
+export const Keyboard = ({ onChar, onDelete, onEnter, guesses, solution }: Props) => {
+  const languageConfig = useContext(ConfigContext)
+  const charStatuses = getStatuses(solution, guesses, languageConfig.orthographyPattern)
 
   const onClick = (value: KeyValue) => {
     if (value === 'ENTER') {
@@ -48,29 +52,29 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
   return (
     <div>
       <div className="flex justify-center mb-1">
-        {ORTHOGRAPHY.slice(0, Math.floor(ORTHOGRAPHY.length * 0.4)).map(
+        {languageConfig.orthography.slice(0, Math.floor(languageConfig.orthography.length * 0.4)).map(
           (char) => (
-            <Key value={char} onClick={onClick} status={charStatuses[char]} />
+            <Key value={char} key={`key-${char}`} onClick={onClick} status={charStatuses[char]} />
           )
         )}
       </div>
       <div className="flex justify-center mb-1">
-        {ORTHOGRAPHY.slice(
-          Math.floor(ORTHOGRAPHY.length * 0.4),
-          Math.floor(ORTHOGRAPHY.length * 0.7)
+        {languageConfig.orthography.slice(
+          Math.floor(languageConfig.orthography.length * 0.4),
+          Math.floor(languageConfig.orthography.length * 0.7)
         ).map((char) => (
-          <Key value={char} onClick={onClick} status={charStatuses[char]} />
+          <Key value={char} key={`key-${char}`} onClick={onClick} status={charStatuses[char]} />
         ))}
       </div>
       <div className="flex justify-center">
         <Key width={65.4} value="ENTER" onClick={onClick}>
           Enter
         </Key>
-        {ORTHOGRAPHY.slice(
-          Math.floor(ORTHOGRAPHY.length * 0.7),
-          ORTHOGRAPHY.length
+        {languageConfig.orthography.slice(
+          Math.floor(languageConfig.orthography.length * 0.7),
+          languageConfig.orthography.length
         ).map((char) => (
-          <Key value={char} onClick={onClick} status={charStatuses[char]} />
+          <Key value={char} key={`key-${char}`} onClick={onClick} status={charStatuses[char]} />
         ))}
         <Key width={65.4} value="DELETE" onClick={onClick}>
           Delete
