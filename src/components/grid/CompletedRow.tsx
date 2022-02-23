@@ -3,7 +3,6 @@ import { useContext } from 'react'
 import ConfigContext from '../../context/ConfigContext'
 
 import { getGuessStatuses } from '../../lib/statuses'
-import { useWordOfTheDay } from '../../lib/words'
 import { Cell } from './Cell'
 
 type Props = {

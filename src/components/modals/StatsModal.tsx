@@ -1,5 +1,5 @@
 import Countdown from 'react-countdown'
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 
 import ConfigContext from '../../context/ConfigContext'
 
