@@ -399,7 +399,7 @@ export const VALIDGUESSES = [
 'ɛhaku',
 'ɛsala',
 "ɛsh'a",
-'ɛsh'i',
+"ɛsh'i",
 'ɛmani',
 'ɛmawi',
 'ɛmati',
