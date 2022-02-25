@@ -284,7 +284,7 @@ export const VALIDGUESSES = [
 'uhkri',
 'unkri',
 'inkri',
-'po'ɔn",
+"po'ɔn",
 "me'ɛn",
 "pi'ɛn",
 "ya'an",
