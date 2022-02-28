@@ -34,8 +34,8 @@ export const StatsModal = ({
   handleShare,
 }: Props) => {
 
-  const wordOfTheDay = useWordOfTheDay()
   const languageConfig = useContext(ConfigContext)
+  const wordOfTheDay = useWordOfTheDay(languageConfig)
 
   if (gameStats.totalGames <= 0) {
     return (

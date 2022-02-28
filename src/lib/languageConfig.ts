@@ -87,7 +87,7 @@ export const useLanguageConfig = () => {
                 }
 
                 setLanguageConfig(externalConf)
-                setGameConfigUpdated(false)// double check that this has no side effect... maybe set conditionally?
+                setGameConfigUpdated(false)
             });
         }
     }

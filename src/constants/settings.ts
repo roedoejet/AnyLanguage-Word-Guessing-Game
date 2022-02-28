@@ -9,8 +9,8 @@ export const SETTINGS = {
     id: "sencoten",
     label: "SENCOTEN"
   },{
-    id: "nisgaa",
-    label: "Nisga'a"
+    id: "homalco",
+    label: "Homalco"
   }],
   tries: 6,
   shuffle: false,

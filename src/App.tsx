@@ -1,4 +1,4 @@
-import { useState, useEffect, ChangeEvent, useMemo, useContext } from 'react'
+import { useState, useEffect, ChangeEvent } from 'react'
 
 import { ConfigContext } from './context/ConfigContext'
 import { InformationCircleIcon } from '@heroicons/react/outline'
@@ -26,7 +26,7 @@ const ALERT_TIME_MS = 2000
 
 function App() {
   const languageConfig = useLanguageConfig()
-  const wordOfTheDay = useWordOfTheDay()
+  const wordOfTheDay = useWordOfTheDay(languageConfig)
   const [currentGuess, setCurrentGuess] = useState<Array<string>>([])
   const [isGameWon, setIsGameWon] = useState(false)
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
@@ -57,8 +57,7 @@ function App() {
 
   useEffect(() => {
     saveGameStateToLocalStorage({ guesses, solution: wordOfTheDay?.solution })
-    console.log(wordOfTheDay)
-  }, [guesses, wordOfTheDay])
+  }, [guesses, wordOfTheDay, languageConfig])
 
   useEffect(() => {
     if (isGameWon) {
@@ -155,6 +154,11 @@ function App() {
       `${window.location.pathname}?language=${selectedValue}`
     )
     languageConfig.setGameConfigUpdated(true)
+
+    // Reset state
+    setGuesses([])
+    setIsGameWon(false)
+    setIsGameLost(false)
   }
 
   return (
@@ -250,15 +254,30 @@ function App() {
           isOpen={successAlert !== ''}
           variant="success"
         />
-        <br />
-        {JSON.stringify(languageConfig?.orthography)}
-        <br />
-        {wordOfTheDay?.solution}
-        <br />
-        {JSON.stringify(languageConfig?.words)}
-        <br />
-        {JSON.stringify(languageConfig?.validGuesses)}
-        <br />
+        <div
+          style={{
+            display: new URLSearchParams(window.location.search).get('debug')
+              ? 'block'
+              : 'none',
+          }}
+        >
+          <br />
+          <strong>ALPHABET:</strong>
+          <br /> {JSON.stringify(languageConfig?.orthography)}
+          <br />
+          <strong>SOLUTION:</strong>
+          <br /> {wordOfTheDay?.solution}
+          <br />
+          <strong>WORDS:</strong>
+          <br /> {JSON.stringify(languageConfig?.words)}
+          <br />
+          <strong>VALID GUESSES:</strong>
+          <br /> {JSON.stringify(languageConfig?.validGuesses)}
+          <br />
+          <strong>LANGUAGE:</strong>
+          <br /> {JSON.stringify(languageConfig?.language)}
+          <br />
+        </div>
       </div>
     </ConfigContext.Provider>
   )

@@ -11,7 +11,7 @@ type Props = {
 
 export const MiniCompletedRow = ({ guess }: Props) => {
   const languageConfig = useContext(ConfigContext)
-  const wordOfTheDay = useWordOfTheDay()
+  const wordOfTheDay = useWordOfTheDay(languageConfig)
   const statuses = getGuessStatuses(wordOfTheDay?.solution, guess, languageConfig.orthographyPattern)
 
   return (

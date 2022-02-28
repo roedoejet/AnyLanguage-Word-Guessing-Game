@@ -1,12 +1,12 @@
-import { createContext, useMemo } from 'react'
+import { createContext } from 'react'
 
 export const defaultLanguageConfig = {
   language: "",
   languageId: "",
   wordLength: 5,
-  words: ["hello"],
+  words: [""],
   orthography: ["a", "b", "c", "d", "e", "f", "g", "h", "l", "o"],
-  validGuesses: ["hello", "world"],
+  validGuesses: ["", ""],
   authorWebsite: "",
   author: "",
   wordListSourceLink: "",

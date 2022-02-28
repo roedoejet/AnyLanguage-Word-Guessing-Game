@@ -1,12 +1,9 @@
 import { useState, useEffect } from 'react'
-import { useLanguageConfig } from '../lib/languageConfig'
 
-export const useWordOfTheDay = () => {
+export const useWordOfTheDay = (languageConfig: any) => {
   const [solution, setSolution] = useState('');
   const [solutionIndex, setSolutionIndex] = useState(0);
   const [tomorrow, setTomorrow] = useState(0);
-
-  const languageConfig = useLanguageConfig()
 
   useEffect((() => {
     // January 1, 2022 Game Epoch
