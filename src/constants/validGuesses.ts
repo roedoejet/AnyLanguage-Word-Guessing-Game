@@ -251,7 +251,7 @@ export const VALIDGUESSES = [
 'yasha',
 'yashi',
 "yat'ɛ",
-'yeɛtu',
+'yehtu',
 'yishi',
 "yit'ɛ",
 'yuhki',
