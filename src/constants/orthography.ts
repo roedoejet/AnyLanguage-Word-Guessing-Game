@@ -1,11 +1,11 @@
 import { CONFIG } from './config'
 
 export const ORTHOGRAPHY = [
-  'a',
-  'aa',
-  'b',
-  'd',
-  'e',
+  'ᐁ',
+  'ᐯ',
+  'ᑌ',
+  'ᑫ',
+  'ᒉ',
   'ee',
   'g',
   'g̱',

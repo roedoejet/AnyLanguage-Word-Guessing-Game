@@ -1,7 +1,7 @@
 import { CONFIG } from './config'
 
 export const WORDS = [
-  'adaawḵ',
+  'ᐁᐁᐁᐁᐁ',
   'adixs',
   'algyax̱',
   'algyax̱',
