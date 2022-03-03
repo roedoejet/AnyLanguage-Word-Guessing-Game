@@ -2,23 +2,20 @@ import { CONFIG } from './config'
 
 export const ORTHOGRAPHY = [
   'ᐁ',
-  'ᐯ',
-  'ᑌ',
-  'ᑫ',
-  'ᒉ',
-<<<<<<< Updated upstream
+  'aa',
+  'b',
+  'd',
+  'e',
   'ee',
   'g',
   'g̱',
   'gw',
   'gy',
-=======
   'ᒣ',
   'ᓀ',
   'ᓭ',
   'ᔐ',
   'ᔦ',
->>>>>>> Stashed changes
   'h',
   'hl',
   'i',
