@@ -6,11 +6,19 @@ export const ORTHOGRAPHY = [
   'ᑌ',
   'ᑫ',
   'ᒉ',
+<<<<<<< Updated upstream
   'ee',
   'g',
   'g̱',
   'gw',
   'gy',
+=======
+  'ᒣ',
+  'ᓀ',
+  'ᓭ',
+  'ᔐ',
+  'ᔦ',
+>>>>>>> Stashed changes
   'h',
   'hl',
   'i',
