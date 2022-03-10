@@ -5,7 +5,7 @@ export const CONFIG = {
   author: 'Haowen Jiang', // Put your name here so people know who made this Wordle!
   authorWebsite: 'https://howard-haowen.github.io/', // Put a link to your website or social media here
   wordListSource: '族語E樂園', // Describe the source material for your words here
-  wordListSourceLink: 'https://github.com/howard-haowen/Formosan-languages', // Put a link to the source material for your words here
+  wordListSourceLink: 'http://web.klokah.tw/', // Put a link to the source material for your words here
   //
   // THESE NEXT SETTINGS ARE FOR ADVANCED USERS
   //
