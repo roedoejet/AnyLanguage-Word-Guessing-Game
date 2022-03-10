@@ -6,6 +6,7 @@ export const ORTHOGRAPHY = [
   'c',
   'd',
   'e',
+  'f',
   'g',
   'h',
   'i',
@@ -25,7 +26,6 @@ export const ORTHOGRAPHY = [
   'w',
   'y',
   'z',
-  "’",
 ]
 
 if (CONFIG.normalization) {
