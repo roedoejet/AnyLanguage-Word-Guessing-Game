@@ -1,0 +1,53 @@
+{
+    "about": "遊戲說明",
+    "enterKey": "輸入",
+    "deleteKey": "刪除",
+    "notEnoughLetters": "字母數不足",
+    "wordNotFound": "查無此單詞",
+    "solution": "正解為 {{solution}}",
+    "gameCopied": "已將遊戲複製至剪貼簿",
+    "howToPlay": "遊戲規則",
+    "instructions": "您有 {{tries}} 次猜單詞的機會。每輸入一個單詞，方塊會改變顏色，透過顏色的變化您能夠推測正解。",
+    "pickYourLanguage": "選擇語言",
+    "correctSpotInstructions": "字母 K 出現在正解當中，並且在正確的位置。",
+    "wrongSpotInstructions": "字母 E 出現在正解當中，但不在正確的位置。",
+    "notInWordInstructions": "字母 V 不正解當中。",
+    "guessDistribution": "猜詞分佈",
+    "statistics": "統計",
+    "totalTries": "總猜測次數",
+    "successRate": "成功率",
+    "currentStreak": "當前連續獲勝次數",
+    "bestStreak": "最佳連續獲勝次數",
+    "newWordCountdown": "離下個新單詞出現還有",
+    "share": "分享",
+    "firstExampleWord": [
+        "K",
+        "E",
+        "M",
+        "A",
+        "N"
+    ],
+    "secondExampleWord": [
+        "A",
+        "N",
+        "E",
+        "M",
+        "A"
+    ],
+    "thirdExampleWord": [
+        "K",
+        "A",
+        "S",
+        "I",
+        "V"
+    ],
+    "aboutAuthorSentence": "本遊戲取自 Wordle 開源專案，由<3>{{author}}</3>改編為排灣語版本。",
+    "aboutCodeSentence": "Check out <1>the original code</1> by <3>Hannah Park</3> or have a look at <5>Aidan Pine's fork</5> and customize it for another language! ",
+    "aboutDataSentence": "單詞來源為 <1>{{wordListSource}}</1>. ",
+    "aboutOriginalSentence": "您也可以在 <1>here</1> 玩玩原版的遊戲喔！",
+    "languages": {
+        "en": "English",
+        "es": "Español",
+        "zh": "中文"
+    }
+}
