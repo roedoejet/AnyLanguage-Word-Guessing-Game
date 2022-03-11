@@ -42,9 +42,9 @@
         "V"
     ],
     "aboutAuthorSentence": "本遊戲源自 Wordle 開源專案，由<3>{{author}}</3>改編為排灣語版本。",
-    "aboutCodeSentence": "原專案作者為<3>Hannah Park</3>，原始碼在<1>the original code</1>。本遊戲依據的是<5>Aidan Pine's fork</5>的修訂版。",
-    "aboutDataSentence": "單詞來源為 <1>{{wordListSource}}</1>。",
-    "aboutOriginalSentence": "您也可以前往 <1>here</1> 玩玩原版的遊戲喔！",
+    "aboutCodeSentence": "原專案作者為<3>Hannah Park</3>，原始碼在<1>the original code</1>。本遊戲的開發依據為<5>Aidan Pine's fork</5>。",
+    "aboutDataSentence": "本遊戲的單詞來源為 <1>{{wordListSource}}</1>。",
+    "aboutOriginalSentence": "您也可以前往 <1>here</1> 玩一玩原版的 Wordle 喔！",
     "languages": {
         "zh": "中文",
         "en": "English"
