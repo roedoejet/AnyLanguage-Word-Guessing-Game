@@ -21,28 +21,25 @@
     "newWordCountdown": "距離下個新單詞出現還有",
     "share": "分享",
     "firstExampleWord": [
-        "T",
-        "I",
+        "K",
+        "E",
         "M",
         "A",
-        "DJ",
-        "U"
+        "N"
     ],
     "secondExampleWord": [
-        "C",
-        "I",
-        "N",
         "A",
-        "V",
-        "U"
+        "N",
+        "E",
+        "M",
+        "A"
     ],
     "thirdExampleWord": [
-        "P",
+        "K",
         "A",
-        "Y",
-        "U",
-        "A",
-        "N"
+        "S",
+        "I",
+        "V"
     ],
     "aboutAuthorSentence": "本遊戲源自 Wordle 開源專案，由<3>{{author}}</3>改編為排灣語版本。",
     "aboutCodeSentence": "原專案作者為<3>Hannah Park</3>，原始碼在<1>the original code</1>。本遊戲的開發依據為<5>Aidan Pine's fork</5>。",
