@@ -1,11 +1,11 @@
 export const CONFIG = {
   tries: 6, // This changes how many tries you get to finish the wordle
-  language: 'Paiwan, a language of Taiwan', // This changes the display name for your language
+  language: 'Pinaiwanan|排灣語|Paiwan, a language of Taiwan', // This changes the display name for your language
   wordLength: 6, // This sets how long each word is based on how many characters (as defined in orthography.ts) are in each word
   author: 'Haowen Jiang', // Put your name here so people know who made this Wordle!
   authorWebsite: 'https://howard-haowen.github.io/', // Put a link to your website or social media here
-  wordListSource: '族語E樂園', // Describe the source material for your words here
-  wordListSourceLink: 'http://web.klokah.tw/', // Put a link to the source material for your words here
+  wordListSource: 'Dataset of Formosan-Mandarin sentence pairs', // Describe the source material for your words here
+  wordListSourceLink: 'https://share.streamlit.io/howard-haowen/formosan-languages/main/app.py', // Put a link to the source material for your words here
   //
   // THESE NEXT SETTINGS ARE FOR ADVANCED USERS
   //
