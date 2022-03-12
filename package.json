@@ -1,7 +1,7 @@
 {
     "name": "Paiwan Wordle",
     "version": "0.1.0",
-    "homepage": "https://howard-haowen.github.io/Wordle/",
+    "homepage": "https://howard-haowen.github.io/paiwan-wordle/",
     "private": true,
     "dependencies": {
         "@bcgov/bc-sans": "^1.0.1",
