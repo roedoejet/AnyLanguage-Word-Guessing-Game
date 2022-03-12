@@ -1,6 +1,6 @@
 export const CONFIG = {
   tries: 6, // This changes how many tries you get to finish the wordle
-  language: '排灣語|Pinaiwanan|Paiwan, a language of Taiwan', // This changes the display name for your language
+  language: '排灣\nPinaiwanan (Paiwan, a language of Taiwan)', // This changes the display name for your language
   wordLength: 6, // This sets how long each word is based on how many characters (as defined in orthography.ts) are in each word
   author: 'Haowen Jiang', // Put your name here so people know who made this Wordle!
   authorWebsite: 'https://howard-haowen.github.io/', // Put a link to your website or social media here
