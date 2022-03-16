@@ -1,6 +1,6 @@
 {
     "about": "About this game",
-    "gameName": "Not Wordle - {{language}}",
+    "gameName": "Paiwan, a language of Taiwan",
     "enterKey": "Enter",
     "deleteKey": "Delete",
     "notEnoughLetters": "Not enough letters",
@@ -10,8 +10,8 @@
     "howToPlay": "How to play",
     "instructions": "Guess the word in {{tries}} tries. After each guess, the color of the tiles will change to show how close your guess was to the word.",
     "pickYourLanguage": "Choose a language",
-    "correctSpotInstructions": "The letter W is in the word and in the correct spot.",
-    "wrongSpotInstructions": "The letter L is in the word but in the wrong spot.",
+    "correctSpotInstructions": "The letter T is in the word and in the correct spot.",
+    "wrongSpotInstructions": "The letter Y is in the word but in the wrong spot.",
     "notInWordInstructions": "The letter U is not in the word in any spot.",
     "guessDistribution": "Guess Distribution",
     "statistics": "Statistics",
@@ -27,11 +27,15 @@
         "Well done!"
     ],
     "firstExampleWord": [{
-            "letter": "W",
+            "letter": "T",
             "highlight": true
         },
         {
-            "letter": "E",
+            "letter": "I",
+            "highlight": false
+        },
+        {
+            "letter": "M",
             "highlight": false
         },
         {
@@ -39,11 +43,11 @@
             "highlight": false
         },
         {
-            "letter": "R",
+            "letter": "DJ",
             "highlight": false
         },
         {
-            "letter": "Y",
+            "letter": "U",
             "highlight": false
         }
     ],
@@ -52,24 +56,15 @@
             "highlight": false
         },
         {
-            "letter": "I",
+            "letter": "A",
             "highlight": false
         },
         {
-            "letter": "L",
+            "letter": "Y",
             "highlight": true
         },
         {
-            "letter": "O",
-            "highlight": false
-        },
-        {
-            "letter": "T",
-            "highlight": false
-        }
-    ],
-    "thirdExampleWord": [{
-            "letter": "V",
+            "letter": "U",
             "highlight": false
         },
         {
@@ -77,16 +72,33 @@
             "highlight": false
         },
         {
-            "letter": "G",
+            "letter": "N",
+            "highlight": false
+        }                
+    ],
+    "thirdExampleWord": [{
+            "letter": "TJ",
+            "highlight": false
+        },
+        {
+            "letter": "U",
+            "highlight": false
+        },
+        {
+            "letter": "R",
+            "highlight": false
+        },
+        {
+            "letter": "U",
+            "highlight": false
+        },
+        {
+            "letter": "V",
             "highlight": false
         },
         {
             "letter": "U",
             "highlight": true
-        },
-        {
-            "letter": "E",
-            "highlight": false
         }
     ],
     "aboutAuthorSentence": "This is an open source clone of the game Wordle adapted to {{language}} by <3>{{author}}</3>. ",
