@@ -1,17 +1,18 @@
 {
     "about": "關於本遊戲",
+    "gameName": "Not Wordle - {{language}}",
     "enterKey": "輸入",
     "deleteKey": "刪除",
-    "notEnoughLetters": "字母數不足",
+    "notEnoughLetters": "字母數不足，請填滿方塊",
     "wordNotFound": "查無此單詞",
     "solution": "正解為 {{solution}}",
     "gameCopied": "已將您的輝煌戰績複製至剪貼簿，開始分享吧！",
     "howToPlay": "遊戲規則",
-    "instructions": "您總共有 {{tries}} 次猜測單詞的機會。每輸入一個單詞，方塊將會改變顏色，透過顏色的變化您將能推測正解。",
+    "instructions": "您總共有 {{tries}} 次猜測單詞的機會。輸入的詞必須填滿所有方塊。每輸入一個單詞，方塊將會改變顏色，透過顏色的變化您將能推測正解。",
     "pickYourLanguage": "選擇語言",
-    "correctSpotInstructions": "字母 K 出現在正解當中，並且在正確的位置。",
-    "wrongSpotInstructions": "字母 E 出現在正解當中，但不在正確的位置。",
-    "notInWordInstructions": "字母 I 不在正解當中。",
+    "correctSpotInstructions": "字母 T 出現在正解當中，並且在正確的位置。",
+    "wrongSpotInstructions": "字母 Y 出現在正解當中，但不在正確的位置。",
+    "notInWordInstructions": "字母 U 不在正解當中。",
     "guessDistribution": "猜詞分佈",
     "statistics": "統計",
     "totalTries": "總猜測次數",
@@ -20,26 +21,85 @@
     "bestStreak": "最佳連續獲勝次數",
     "newWordCountdown": "距離下個新單詞出現還有",
     "share": "分享",
-    "firstExampleWord": [
-        "K",
-        "E",
-        "M",
-        "A",
-        "N"
+    "winMessages": [
+        "太棒了！",
+        "完美！",
+        "做得好！"
     ],
-    "secondExampleWord": [
-        "A",
-        "N",
-        "E",
-        "M",
-        "A"
+    "firstExampleWord": [{
+            "letter": "T",
+            "highlight": true
+        },
+        {
+            "letter": "I",
+            "highlight": false
+        },
+        {
+            "letter": "M",
+            "highlight": false
+        },
+        {
+            "letter": "A",
+            "highlight": false
+        },
+        {
+            "letter": "DJ",
+            "highlight": false
+        },
+        {
+            "letter": "U",
+            "highlight": false
+        }
     ],
-    "thirdExampleWord": [
-        "K",
-        "A",
-        "S",
-        "I",
-        "V"
+    "secondExampleWord": [{
+            "letter": "P",
+            "highlight": false
+        },
+        {
+            "letter": "A",
+            "highlight": false
+        },
+        {
+            "letter": "Y",
+            "highlight": true
+        },
+        {
+            "letter": "U",
+            "highlight": false
+        },
+        {
+            "letter": "A",
+            "highlight": false
+        },
+        {
+            "letter": "N",
+            "highlight": false
+        }                
+    ],
+    "thirdExampleWord": [{
+            "letter": "TJ",
+            "highlight": false
+        },
+        {
+            "letter": "U",
+            "highlight": false
+        },
+        {
+            "letter": "R",
+            "highlight": false
+        },
+        {
+            "letter": "U",
+            "highlight": false
+        },
+        {
+            "letter": "V",
+            "highlight": false
+        },
+        {
+            "letter": "U",
+            "highlight": true
+        }
     ],
     "aboutAuthorSentence": "本遊戲源自 Wordle 開源專案，由<3>{{author}}</3>改編為排灣語版本。",
     "aboutCodeSentence": "原專案作者為<3>Hannah Park</3>，原始碼在<1>the original code</1>。本遊戲的開發依據為<5>Aidan Pine's fork</5>。",
