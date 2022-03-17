@@ -6,11 +6,26 @@
  */ 
 export const SETTINGS = {
   allowedSites: [{
-    id: "sencoten",
-    label: "SENCOTEN"
+    id: "tseshahtlanguage",
+    label: "c̕išaaʔatḥ"
   },{
     id: "homalco",
     label: "Homalco"
+  },{
+    id: "nadleh-stella-whutenne",
+    label: "Nadleh-Stella Whut’enne"
+  },{
+    id: "sliammon",
+    label: "Sliammon"
+  },{
+    id: "smalgyax-beta",
+    label: "Sm'algya̱x"
+  },{
+    id: "stzuminus",
+    label: "Stz’uminus"
+  },{
+    id: "tahltan",
+    label: "Tāłtān"
   }],
   tries: 6,
   shuffle: false,
