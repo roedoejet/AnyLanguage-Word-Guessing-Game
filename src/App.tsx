@@ -256,26 +256,29 @@ function App() {
         />
         <div
           style={{
+            display: new URLSearchParams(window.location.search).get('test')
+              ? 'block'
+              : 'none',
+          }}
+        >
+          <br />
+          <strong>VALID GUESSES:</strong>
+          <br /> {JSON.stringify(languageConfig?.validGuesses)}
+          <br />
+        </div>
+        <div
+          style={{
             display: new URLSearchParams(window.location.search).get('debug')
               ? 'block'
               : 'none',
           }}
         >
           <br />
-          <strong>ALPHABET:</strong>
-          <br /> {JSON.stringify(languageConfig?.orthography)}
-          <br />
           <strong>SOLUTION:</strong>
           <br /> {wordOfTheDay?.solution}
           <br />
           <strong>WORDS:</strong>
           <br /> {JSON.stringify(languageConfig?.words)}
-          <br />
-          <strong>VALID GUESSES:</strong>
-          <br /> {JSON.stringify(languageConfig?.validGuesses)}
-          <br />
-          <strong>LANGUAGE:</strong>
-          <br /> {JSON.stringify(languageConfig?.language)}
           <br />
         </div>
       </div>
