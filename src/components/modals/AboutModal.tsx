@@ -41,12 +41,7 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
         >
           Aidan Pine's fork
         </a>{' '}
-        and customize it for another language! The words for this Wordle were
-        sourced from{' '}
-        <a href={languageConfig?.wordListSourceLink} className="underline font-bold">
-          {languageConfig?.wordListSource}
-        </a>
-        . Or,
+        and customize it for another language! Or,
         {' you can also '}
         <a
           href="https://www.powerlanguage.co.uk/wordle/"
@@ -54,6 +49,15 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
         >
           play the original here
         </a>
+        .
+      <br />
+      <br />
+        The words for this Wordle were
+        sourced from{' '}
+        <a href={languageConfig?.wordListSourceLink} className="underline font-bold">
+          {languageConfig?.wordListSource}
+        </a>
+        .
       </p>
     </BaseModal>
   )
