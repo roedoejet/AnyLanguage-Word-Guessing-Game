@@ -12,6 +12,9 @@ export const SETTINGS = {
     id: "homalco",
     label: "Homalco"
   },{
+    id: "lilwat",
+    label: "Líl̓wat"
+  },{
     id: "nadleh-stella-whutenne",
     label: "Nadleh-Stella Whut’enne"
   },{
@@ -26,6 +29,9 @@ export const SETTINGS = {
   },{
     id: "tahltan",
     label: "Tāłtān"
+  },{
+    id: "wuikala",
+    label: "’Uik̓ala"
   }],
   tries: 6,
   shuffle: false,
