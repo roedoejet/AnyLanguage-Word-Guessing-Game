@@ -10,6 +10,7 @@ export const defaultLanguageConfig = {
   authorWebsite: "",
   author: "",
   wordListSourceLink: "",
+  wordListSourceSearchLink: "",
   wordListSource: "",
   orthographyPattern: new RegExp("")
 };

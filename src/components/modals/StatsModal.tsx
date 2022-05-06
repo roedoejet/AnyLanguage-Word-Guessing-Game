@@ -59,7 +59,7 @@ export const StatsModal = ({
             className="mt-2 w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-purple-600 text-base font-medium text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:text-sm"
             onClick={() => {
               // update this so it's a direct search
-              window.open(languageConfig?.wordListSourceLink);
+              window.open(languageConfig?.wordListSourceSearchLink.replace("___", solution));
             }}
           >
             Look up <strong>{solution}</strong> in {languageConfig?.language}

@@ -12,6 +12,7 @@ export type LanguageConfig = {
     languageId: string,
     authorWebsite: string,
     author: string,
+    wordListSourceSearchLink: string,
     wordListSourceLink: string,
     wordListSource: string,
     setGameConfigUpdated: (v: boolean) => void,
