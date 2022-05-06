@@ -20,8 +20,10 @@ import {
 } from './lib/localStorage'
 
 import { SETTINGS } from './constants/settings'
+import fvlogo from './logo-fv-black.png'
 
 import '@bcgov/bc-sans/css/BCSans.css'
+
 const ALERT_TIME_MS = 2000
 
 function App() {
@@ -165,7 +167,9 @@ function App() {
     <ConfigContext.Provider value={languageConfig}>
       <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div className="flex w-80 mx-auto items-center mb-8">
-          <h1 className="text-xl grow font-bold">{languageConfig.language}</h1>
+          <h1 className="text-xl grow font-bold">
+            {languageConfig.language} Not-Wordle
+          </h1>
           <InformationCircleIcon
             className="h-6 w-6 cursor-pointer"
             onClick={() => setIsInfoModalOpen(true)}
@@ -211,6 +215,14 @@ function App() {
         />
 
         <div className="flex items-center border-t-2 mt-6">
+          <a
+            id="navigate-FV"
+            className="mx-auto mt-6 mr-8 flex"
+            href={languageConfig?.authorWebsite}
+          >
+            <img src={fvlogo} alt="FirstVoices" />
+          </a>
+
           <button
             type="button"
             className="mx-auto mt-8 mr-8 px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 select-none"
