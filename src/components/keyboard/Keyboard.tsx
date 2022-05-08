@@ -2,7 +2,8 @@ import { KeyValue } from '../../lib/keyboard'
 import { getStatuses } from '../../lib/statuses'
 import { Key } from './Key'
 import { useEffect } from 'react'
-import { ORTHOGRAPHY } from '../../constants/orthography'
+import { KEY_SYMBOLS } from '../../constants/orthography'
+import { COMBINING_MARKS } from '../../constants/orthography'
 import { useTranslation } from 'react-i18next'
 
 type Props = {
@@ -16,7 +17,7 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
   const { t } = useTranslation()
   const charStatuses = getStatuses(guesses)
 
-  const onClick = (value: KeyValue) => {
+  const onClick = (value: KeyValue ) => {
     if (value === 'ENTER') {
       onEnter()
     } else if (value === 'DELETE') {
@@ -50,7 +51,19 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
   return (
     <div>
       <div className="flex justify-center mb-1">
-        {ORTHOGRAPHY.slice(0, Math.floor(ORTHOGRAPHY.length * 0.4)).map(
+        {COMBINING_MARKS.map(
+          (combine) => (
+            <Key
+              key={combine}
+              value={combine}
+              onClick={onClick}
+              status={charStatuses[combine]}
+            />
+          )
+        )}
+      </div>
+      <div className="flex justify-center mb-1">
+        {KEY_SYMBOLS.slice(0, Math.floor(KEY_SYMBOLS.length * 0.4)).map(
           (char) => (
             <Key
               key={char}
@@ -62,9 +75,9 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
         )}
       </div>
       <div className="flex justify-center mb-1">
-        {ORTHOGRAPHY.slice(
-          Math.floor(ORTHOGRAPHY.length * 0.4),
-          Math.floor(ORTHOGRAPHY.length * 0.7)
+        {KEY_SYMBOLS.slice(
+          Math.floor(KEY_SYMBOLS.length * 0.4),
+          Math.floor(KEY_SYMBOLS.length * 0.7)
         ).map((char) => (
           <Key
             key={char}
@@ -78,9 +91,9 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
         <Key key="enterKey" width={65.4} value="ENTER" onClick={onClick}>
           {t('enterKey')}
         </Key>
-        {ORTHOGRAPHY.slice(
-          Math.floor(ORTHOGRAPHY.length * 0.7),
-          ORTHOGRAPHY.length
+        {KEY_SYMBOLS.slice(
+          Math.floor(KEY_SYMBOLS.length * 0.7),
+          KEY_SYMBOLS.length
         ).map((char) => (
           <Key
             key={char}

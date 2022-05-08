@@ -15,10 +15,11 @@ _Summary of changes_
 - Use Unicode normalization by default
 - Use BC Sans open source font to better render Indigenous language orthographies in BC, Canada. See the blog to change the font
 - Complete localization/translateability of the interface using react-i18next
+- Add suffixes/diacritics table to "orthography.ts"
 
 _To adapt for your language (the basics):_
 
-1. Change the file in `src/constants/orthography.ts` to use your language's writing system.
+1. Change the file in `src/constants/orthography.ts` to use your language's writing system and diacritics, for diacritic code points, https://r12a.github.io/app-conversion/ may be helpful.
 2. Change the file in `src/constants/wordlist.ts` to use your language's words.
 3. Change the file in `src/constants/validGuesses.ts` to include all valid guesses for your language.
 4. Change the file in `src/constants/config.ts` to include meta data about your language. If your language needs words longer or shorter than 5, you can set that in this file and also set the number of tries.
