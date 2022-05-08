@@ -17,6 +17,7 @@ import {
 } from './lib/localStorage'
 
 import { CONFIG } from './constants/config'
+import { COMBINING_MARKS } from './constants/orthography'
 import ReactGA from 'react-ga'
 import '@bcgov/bc-sans/css/BCSans.css'
 import './i18n'
@@ -82,13 +83,20 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   }, [isGameWon, isGameLost, t])
 
   const onChar = (value: string) => {
+    const index = COMBINING_MARKS.findIndex((element) => element === value)
     if (
-      currentGuess.length < CONFIG.wordLength &&
       guesses.length < CONFIG.tries &&
-      !isGameWon
+      !isGameWon &&
+      (currentGuess.length < CONFIG.wordLength || index > -1)
     ) {
-      let newGuess = currentGuess.concat([value])
-      setCurrentGuess(newGuess)
+      if (index > -1) {
+        let lastvalue = currentGuess.slice(-1) + value
+        let newGuess = currentGuess.slice(0, -1).concat([lastvalue])
+        setCurrentGuess(newGuess)
+      } else {
+        let newGuess = currentGuess.concat([value])
+        setCurrentGuess(newGuess)
+      }
     }
   }
 
