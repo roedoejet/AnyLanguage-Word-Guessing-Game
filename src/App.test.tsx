@@ -3,7 +3,7 @@ import App from './App'
 
 test('renders Not Wordle', () => {
   render(<App />)
-  const linkElement = screen.getByText(/Not Wordle/i)
+  const linkElement = screen.getByText(/Not-Wordle/i)
   expect(linkElement).toBeInTheDocument()
 })
 
