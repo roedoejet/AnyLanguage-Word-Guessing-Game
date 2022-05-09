@@ -274,8 +274,8 @@ function App() {
           }}
         >
           <br />
-          <strong>VALID GUESSES:</strong>
-          <br /> {JSON.stringify(languageConfig?.validGuesses)}
+          <strong>POSSIBLE GUESSES:</strong>
+          <br /> {languageConfig?.validGuesses.join(', ')}
           <br />
         </div>
         <div
@@ -290,7 +290,10 @@ function App() {
           <br /> {wordOfTheDay?.solution}
           <br />
           <strong>WORDS:</strong>
-          <br /> {JSON.stringify(languageConfig?.words)}
+          <br /> {languageConfig?.words.join(', ')}
+          <br />
+          <strong>POSSIBLE GUESSES:</strong>
+          <br /> {languageConfig?.validGuesses.join(', ')}
           <br />
         </div>
       </div>
