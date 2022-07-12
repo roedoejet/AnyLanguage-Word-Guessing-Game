@@ -5,7 +5,7 @@ import { SETTINGS } from '../../constants/settings'
 
 type Props = {
   guesses: string[][]
-  currentGuess: string[],
+  currentGuess: string[]
   solution: string
 }
 

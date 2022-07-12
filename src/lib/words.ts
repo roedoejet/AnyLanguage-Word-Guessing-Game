@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
 
 export const useWordOfTheDay = (languageConfig: any) => {
-  const [solution, setSolution] = useState('');
-  const [solutionIndex, setSolutionIndex] = useState(0);
-  const [tomorrow, setTomorrow] = useState(0);
+  const [solution, setSolution] = useState('')
+  const [solutionIndex, setSolutionIndex] = useState(0)
+  const [tomorrow, setTomorrow] = useState(0)
 
-  useEffect((() => {
+  useEffect(() => {
     // January 1, 2022 Game Epoch
     const epochMs = new Date('January 1, 2022 00:00:00').valueOf()
     const now = Date.now()
@@ -16,16 +16,20 @@ export const useWordOfTheDay = (languageConfig: any) => {
     setSolution(languageConfig.words[index % languageConfig.words.length])
     setSolutionIndex(index)
     setTomorrow(nextday)
-  }), [languageConfig]);
+  }, [languageConfig])
 
   return {
     solution,
     solutionIndex,
-    tomorrow
+    tomorrow,
   }
 }
 
-export const isWordInWordList = (words: string[], validGuesses: string[], word: string) => {
+export const isWordInWordList = (
+  words: string[],
+  validGuesses: string[],
+  word: string
+) => {
   return words.includes(word) || validGuesses.includes(word)
 }
 

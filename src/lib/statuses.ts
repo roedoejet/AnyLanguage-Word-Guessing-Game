@@ -29,7 +29,11 @@ export const getStatuses = (
   return charObj
 }
 
-export const getGuessStatuses = (solution: string, guess: string[], orthographyPattern: RegExp): CharStatus[] => {
+export const getGuessStatuses = (
+  solution: string,
+  guess: string[],
+  orthographyPattern: RegExp
+): CharStatus[] => {
   const splitSolution = solution.split(orthographyPattern).filter((i) => i)
   const splitGuess = guess
 
