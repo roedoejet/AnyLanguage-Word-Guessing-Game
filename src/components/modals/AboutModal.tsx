@@ -50,11 +50,13 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
           play the original here
         </a>
         .
-      <br />
-      <br />
-        The words for this Wordle were
-        sourced from{' '}
-        <a href={languageConfig?.wordListSourceLink} className="underline font-bold">
+        <br />
+        <br />
+        The words for this Wordle were sourced from{' '}
+        <a
+          href={languageConfig?.wordListSourceLink}
+          className="underline font-bold"
+        >
           {languageConfig?.wordListSource}
         </a>
         .

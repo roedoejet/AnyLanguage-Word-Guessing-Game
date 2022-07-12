@@ -12,7 +12,11 @@ type Props = {
 export const MiniCompletedRow = ({ guess }: Props) => {
   const languageConfig = useContext(ConfigContext)
   const wordOfTheDay = useWordOfTheDay(languageConfig)
-  const statuses = getGuessStatuses(wordOfTheDay?.solution, guess, languageConfig.orthographyPattern)
+  const statuses = getGuessStatuses(
+    wordOfTheDay?.solution,
+    guess,
+    languageConfig.orthographyPattern
+  )
 
   return (
     <div className="flex justify-center mb-1">

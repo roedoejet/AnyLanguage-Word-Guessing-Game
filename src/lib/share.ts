@@ -1,9 +1,16 @@
 import { getGuessStatuses } from './statuses'
 import { SETTINGS } from '../constants/settings'
 
-export const shareStatus = (language: string, solution: string, solutionIndex: number, guesses: string[][], lost: boolean, orthographyPattern: RegExp) => {
+export const shareStatus = (
+  language: string,
+  solution: string,
+  solutionIndex: number,
+  guesses: string[][],
+  lost: boolean,
+  orthographyPattern: RegExp
+) => {
   navigator.clipboard.writeText(
-      language +
+    language +
       ' Wordle ' +
       solutionIndex +
       ' ' +
@@ -15,7 +22,11 @@ export const shareStatus = (language: string, solution: string, solutionIndex: n
   )
 }
 
-export const generateEmojiGrid = (solution: string, guesses: string[][], orthographyPattern: RegExp) => {
+export const generateEmojiGrid = (
+  solution: string,
+  guesses: string[][],
+  orthographyPattern: RegExp
+) => {
   return guesses
     .map((guess) => {
       const status = getGuessStatuses(solution, guess, orthographyPattern)

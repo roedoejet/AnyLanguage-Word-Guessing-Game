@@ -1,19 +1,19 @@
 import { createContext } from 'react'
 
 export const defaultLanguageConfig = {
-  language: "",
-  languageId: "",
+  language: '',
+  languageId: '',
   wordLength: 5,
-  words: [""],
-  orthography: ["a", "b", "c", "d", "e", "f", "g", "h", "l", "o"],
-  validGuesses: ["", ""],
-  authorWebsite: "",
-  author: "",
-  wordListSourceLink: "",
-  wordListSourceSearchLink: "",
-  wordListSource: "",
-  orthographyPattern: new RegExp("")
-};
+  words: [''],
+  orthography: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'l', 'o'],
+  validGuesses: ['', ''],
+  authorWebsite: '',
+  author: '',
+  wordListSourceLink: '',
+  wordListSourceSearchLink: '',
+  wordListSource: '',
+  orthographyPattern: new RegExp(''),
+}
 
 export const ConfigContext = createContext(defaultLanguageConfig)
 
