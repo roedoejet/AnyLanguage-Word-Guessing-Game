@@ -1,9 +1,9 @@
-import classnames from 'classnames';
-import { ReactNode } from 'react';
+import classnames from 'classnames'
+import { ReactNode } from 'react'
 
-import { TOOLTIPS } from '../../constants/orthography';
-import { KeyValue } from '../../lib/keyboard';
-import { CharStatus } from '../../lib/statuses';
+import { TOOLTIPS } from '../../constants/orthography'
+import { KeyValue } from '../../lib/keyboard'
+import { CharStatus } from '../../lib/statuses'
 
 type Props = {
   children?: ReactNode

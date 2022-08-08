@@ -1,24 +1,31 @@
-import '@bcgov/bc-sans/css/BCSans.css';
-import './i18n';
+import '@bcgov/bc-sans/css/BCSans.css'
+import './i18n'
 
-import { useEffect, useState } from 'react';
-import ReactGA from 'react-ga';
-import { withTranslation, WithTranslation } from 'react-i18next';
-import ReactTooltip from 'react-tooltip';
+import { useEffect, useState } from 'react'
+import ReactGA from 'react-ga'
+import { withTranslation, WithTranslation } from 'react-i18next'
+import ReactTooltip from 'react-tooltip'
 
-import { ChartBarIcon, InformationCircleIcon, TranslateIcon } from '@heroicons/react/outline';
+import {
+  ChartBarIcon,
+  InformationCircleIcon,
+  TranslateIcon,
+} from '@heroicons/react/outline'
 
-import { Alert } from './components/alerts/Alert';
-import { Grid } from './components/grid/Grid';
-import { Keyboard } from './components/keyboard/Keyboard';
-import { AboutModal } from './components/modals/AboutModal';
-import { InfoModal } from './components/modals/InfoModal';
-import { StatsModal } from './components/modals/StatsModal';
-import { TranslateModal } from './components/modals/TranslateModal';
-import { CONFIG } from './constants/config';
-import { loadGameStateFromLocalStorage, saveGameStateToLocalStorage } from './lib/localStorage';
-import { addStatsForCompletedGame, loadStats } from './lib/stats';
-import { isWinningWord, isWordInWordList, solution } from './lib/words';
+import { Alert } from './components/alerts/Alert'
+import { Grid } from './components/grid/Grid'
+import { Keyboard } from './components/keyboard/Keyboard'
+import { AboutModal } from './components/modals/AboutModal'
+import { InfoModal } from './components/modals/InfoModal'
+import { StatsModal } from './components/modals/StatsModal'
+import { TranslateModal } from './components/modals/TranslateModal'
+import { CONFIG } from './constants/config'
+import {
+  loadGameStateFromLocalStorage,
+  saveGameStateToLocalStorage,
+} from './lib/localStorage'
+import { addStatsForCompletedGame, loadStats } from './lib/stats'
+import { isWinningWord, isWordInWordList, solution } from './lib/words'
 
 const ALERT_TIME_MS = 2000
 
