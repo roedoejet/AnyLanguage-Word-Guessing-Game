@@ -1,4 +1,4 @@
-import { CONFIG } from './config'
+import { CONFIG } from './config';
 
 export const ORTHOGRAPHY = [
   'a',
@@ -51,6 +51,10 @@ export const ORTHOGRAPHY = [
   "'",
   '?',
 ]
+
+export const TOOLTIPS : any = {
+  "a": 'this is a tooltip',
+}
 
 if (CONFIG.normalization) {
   ORTHOGRAPHY.forEach(
