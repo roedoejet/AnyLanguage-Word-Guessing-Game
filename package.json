@@ -1,7 +1,7 @@
 {
     "name": "any-language-wordle",
     "version": "0.1.0",
-    "homepage": "https://roedoejet.github.io/AnyLanguage-Wordle",
+    "homepage": "https://dzakyem.github.io/AnyLanguage-Wordle",
     "private": true,
     "dependencies": {
         "@bcgov/bc-sans": "^1.0.1",
