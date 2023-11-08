@@ -5,7 +5,7 @@ export const WORDS = [
 'ostîa',
 'tróta',
 'fromi',
-'ridzó',
+'ridzó', 
 'wefra',
 'blâga',
 'amòra',
