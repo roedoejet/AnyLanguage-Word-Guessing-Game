@@ -214,10 +214,10 @@ function App() {
           handleClose={() => setIsAboutModalOpen(false)}
         />
 
-        <div className="flex items-center border-t-2 mt-6">
+        <div className="flex items-start border-t-2 mt-6">
           <a
             id="navigate-FV"
-            className="mx-auto mt-6 mr-8 flex"
+            className=" basis-1/3 mx-auto mt-6 mr-8 flex"
             href={languageConfig?.authorWebsite}
           >
             <img src={fvlogo} alt="FirstVoices" />
@@ -225,12 +225,12 @@ function App() {
 
           <button
             type="button"
-            className="mx-auto mt-8 mr-8 px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 select-none"
+            className="basis-1/3 mx-auto mt-8 mr-8 px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 select-none"
             onClick={() => setIsAboutModalOpen(true)}
           >
             About this game
           </button>
-
+          {/* 
           <select
             className="mx-auto mt-8 px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 select-none"
             onChange={onLanguageSwitch}
@@ -252,7 +252,7 @@ function App() {
                 </option>
               )
             })}
-          </select>
+          </select> */}
         </div>
 
         <Alert message="Not enough letters" isOpen={isNotEnoughLetters} />
