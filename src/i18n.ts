@@ -20,7 +20,6 @@ i18next
     },
     fallbackLng: CONFIG.defaultLang,
     debug: false,
-
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },

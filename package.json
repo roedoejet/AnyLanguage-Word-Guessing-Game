@@ -1,7 +1,7 @@
 {
-    "name": "any-language-wordle",
+    "name": "any-language-word-guessing-game",
     "version": "0.1.0",
-    "homepage": "https://pandersity.github.io/Tunica-Wordle",
+    "homepage": "https://pandersity.github.io/Tunica-Word-Guessing-Game",
     "private": true,
     "dependencies": {
         "@bcgov/bc-sans": "^1.0.1",

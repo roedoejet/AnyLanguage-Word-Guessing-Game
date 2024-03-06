@@ -9,7 +9,6 @@ import { AboutModal } from './components/modals/AboutModal'
 import { InfoModal } from './components/modals/InfoModal'
 import { StatsModal } from './components/modals/StatsModal'
 import { TranslateModal } from './components/modals/TranslateModal'
-import { WIN_MESSAGES } from './constants/strings'
 import { isWordInWordList, isWinningWord, solution } from './lib/words'
 import { addStatsForCompletedGame, loadStats } from './lib/stats'
 import {
@@ -52,8 +51,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     }
     return loaded.guesses
   })
-
-  const TRACKING_ID = CONFIG.googleAnalytics // YOUR_OWN_TRACKING_ID
+  const TRACKING_ID = CONFIG.googleAnalytics
 
   if (TRACKING_ID && process.env.NODE_ENV !== 'test') {
     ReactGA.initialize(TRACKING_ID)
@@ -67,6 +65,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
   useEffect(() => {
     if (isGameWon) {
+      const WIN_MESSAGES = t('winMessages', { returnObjects: true })
       setSuccessAlert(
         WIN_MESSAGES[Math.floor(Math.random() * WIN_MESSAGES.length)]
       )
@@ -80,7 +79,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         setIsStatsModalOpen(true)
       }, ALERT_TIME_MS)
     }
-  }, [isGameWon, isGameLost])
+  }, [isGameWon, isGameLost, t])
 
   const onChar = (value: string) => {
     if (
@@ -149,7 +148,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
       <div className="flex w-80 mx-auto items-center mb-8">
         <h1 className="text-xl grow font-bold">
-          Not Wordle - {CONFIG.language}
+          {t('gameName', { language: CONFIG.language })}
         </h1>
         {translateElement}
         <InformationCircleIcon
