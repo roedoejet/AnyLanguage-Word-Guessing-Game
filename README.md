@@ -1,4 +1,4 @@
-# Any-Language Wordle Clone
+# Any-Language Word Guessing Game
 
 ## Changes in this fork
 
@@ -24,46 +24,30 @@ _To adapt for your language (the basics):_
 4. Change the file in `src/constants/config.ts` to include meta data about your language. If your language needs words longer or shorter than 5, you can set that in this file and also set the number of tries.
 5. Publish on GitHub Pages by changing the `homepage` key in `package.json` and running `npm run deploy` or just committing to the main branch (and a GitHub workflow will take care of the rest).
 
-For more information, including how to localize the interface to your language, visit the blog article: https://blog.mothertongues.org/wordle/.
+For more information, including how to localize the interface to your language, visit the blog article: https://blog.mothertongues.org/word-guessing-game/.
 
-The interface is translated by default in both English and Spanish - other translations are very welcome! 
+The interface is translated by default in English, Kiswahili, Mandarin and Spanish - other translations are very welcome!  To add translations please submit a pull request with the following steps:
+
+1. Add an appropriate localiztion file in `public/locales`
+2. Update the other localization files in `public/locales` to include the additional langauge
+3. Update the `CONFIG.availableLangs` variable in `src/constants/config.ts` to include your language. 
 
 Thanks to Carolyn O'Meara (https://github.com/ckomeara) for providing the Spanish translation.
-
-## On to the original stuff from @hannahcode...
-
-- Go play the real Wordle [here](https://www.powerlanguage.co.uk/wordle/)
-- Read the story behind it [here](https://www.nytimes.com/2022/01/03/technology/wordle-word-game-creator.html)
-- Try a demo of this clone project [here](https://wordle.hannahmariepark.com)
-
-_Inspiration:_
-This game is an open source clone of the immensely popular online word guessing game Wordle. Like many others all over the world, I saw the signature pattern of green, yellow, and white squares popping up all over social media and the web and had to check it out. After a few days of play, I decided it would be great for my learning to try to rebuild Wordle in React!
-
-_Design Decisions:_
-I used a combination of React, Typescript, and Tailwind to build this Wordle Clone. When examining the original Wordle, I assumed the list might come from an external API or database, but after investigating in chrome dev tools I found that the list of words is simply stored in an array on the front end. I'm using the same list as the OG Wordle uses, but watch out for spoilers if you go find the file in this repo! The word match functionality is simple: the word array index increments each day from a fixed game epoch timestamp (only one puzzle per day!) roughly like so:
-
-```
-WORDS[Math.floor((NOW_IN_MS - GAME_EPOCH_IN_MS) / ONE_DAY_IN_MS)]
-```
-
-React enabled me to componentize the littlest parts of the game - keys and letter cells - and use them as the building blocks for the keyboard, word grid, and winning solution graphic. As for handling state, I used the built in useState and useEffect hooks to track guesses, whether the game is won, and to conditionally render popups.
-
-In addition to other things, Typescript helped ensure type safety for the statuses of each guessed letter, which were used in many areas of the app and needed to be accurate for the game to work correctly.
-
-I implemented Tailwind mostly because I wanted to learn how to use Tailwind CSS, but I also took advantage of [Tailwind UI](https://tailwindui.com/) with their [headless package](https://headlessui.dev/) to build the modals and notifications. This was such an easy way to build simple popups for how to play, winning the game, and invalid words.
+Thanks to Haowen Jiang (https://github.com/howard-haowen) for providing the 中文 translation.
+Thanks to Benson Muite (https://github.com/bkmgit) for providing the Kiswahili translation.
 
 _To Run Locally:_
 Clone the repository and perform the following command line actions:
 ```bash
-$ cd wordle
+$ cd anylanguage-word-guessing-game
 $ npm install
 $ npm run start
 ```
 
 _To build/run docker container:_
 ```bash
-$ docker build -t notwordle .
-$ docker run -d -p 3000:3000 notwordle
+$ docker build -t anylanguage-word-guessing-game .
+$ docker run -d -p 3000:3000 anylanguage-word-guessing-game
 ```
 open http://localhost:3000 in browser.
 

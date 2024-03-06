@@ -52,7 +52,7 @@ export const StatsModal = ({
       {(isGameLost || isGameWon) && (
         <div className="mt-5 sm:mt-6 columns-2">
           <div>
-            <h5>{t('newWordIn')}</h5>
+            <h5>{t('newWordCountdown')}</h5>
             <Countdown
               className="text-lg font-medium text-gray-900"
               date={tomorrow}

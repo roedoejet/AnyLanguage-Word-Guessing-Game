@@ -10,10 +10,6 @@ type Props = {
 
 export const TranslateModal = ({ isOpen, handleClose }: Props) => {
   const { t, i18n } = useTranslation()
-  const langs: any = {
-    es: 'Español',
-    en: 'English',
-  }
   const onChangeValue = (event: any) => {
     i18n.changeLanguage(event.target.value)
     localStorage.setItem(localeLanguageKey, event.target.value)
@@ -21,7 +17,7 @@ export const TranslateModal = ({ isOpen, handleClose }: Props) => {
 
   const createOption = (code: string, text: string) => {
     return (
-      <div>
+      <div key={code}>
         <label>{text}</label>
         <input
           className="m-2"
@@ -47,7 +43,7 @@ export const TranslateModal = ({ isOpen, handleClose }: Props) => {
         className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8"
         onChange={onChangeValue}
       >
-        {CONFIG.availableLangs.map((x) => createOption(x, langs[x]))}
+        {CONFIG.availableLangs.map((x) => createOption(x, t(`languages.${x}`)))}
       </div>
     </BaseModal>
   )

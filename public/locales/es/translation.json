@@ -1,5 +1,6 @@
 {
     "about": "Acerca de este juego",
+    "gameName": "No Juego - {{language}}",
     "enterKey": "Enviar",
     "deleteKey": "Eliminar",
     "notEnoughLetters": "No hay suficientes letras",
@@ -20,29 +21,82 @@
     "bestStreak": "Mejor racha",
     "newWordCountdown": "Nueva palabra en",
     "share": "Compartir",
-    "firstExampleWord": [
-        "T",
-        "R",
-        "A",
-        "M",
-        "O"
+    "winMessages": [
+        "¡Gran trabajo!",
+        "Increíble",
+        "¡Bien hecho!"
     ],
-    "secondExampleWord": [
-        "G",
-        "A",
-        "N",
-        "A",
-        "S"
+    "firstExampleWord": [{
+            "letter": "T",
+            "highlight": true
+        },
+        {
+            "letter": "R",
+            "highlight": false
+        },
+        {
+            "letter": "A",
+            "highlight": false
+        },
+        {
+            "letter": "M",
+            "highlight": false
+        },
+        {
+            "letter": "O",
+            "highlight": false
+        }
     ],
-    "thirdExampleWord": [
-        "R",
-        "E",
-        "T",
-        "O",
-        "S"
+    "secondExampleWord": [{
+            "letter": "G",
+            "highlight": false
+        },
+        {
+            "letter": "A",
+            "highlight": false
+        },
+        {
+            "letter": "N",
+            "highlight": true
+        },
+        {
+            "letter": "A",
+            "highlight": false
+        },
+        {
+            "letter": "S",
+            "highlight": false
+        }
     ],
-    "aboutAuthorSentence": "Este es un clon de código abierto del juego Wordle adaptado a {{language}} por <3>{{author}}</3>. ",
+    "thirdExampleWord": [{
+            "letter": "R",
+            "highlight": false
+        },
+        {
+            "letter": "E",
+            "highlight": false
+        },
+        {
+            "letter": "T",
+            "highlight": false
+        },
+        {
+            "letter": "O",
+            "highlight": true
+        },
+        {
+            "letter": "S",
+            "highlight": false
+        }
+    ],
+    "aboutAuthorSentence": "Este es un clon de código abierto del juego Game adaptado a {{language}} por <3>{{author}}</3>. ",
     "aboutCodeSentence": "Echa un vistazo al <1>código original</1> de <3>Hannah Park</3> o echa un vistazo al <5>fork de Aidan Pine</5> y personalízalo para otro idioma. ",
     "aboutDataSentence": "Las palabras para este juego se obtuvieron de <1>{{wordListSource}}</1>. ",
-    "aboutOriginalSentence": "También puedes jugar la original <1>aquí</1>"
+    "aboutOriginalSentence": "También puedes jugar la original <1>aquí</1>",
+    "languages": {
+        "en": "English",
+        "es": "Español",
+        "sw": "Kiswahili",
+        "zh": "中文"
+    }
 }

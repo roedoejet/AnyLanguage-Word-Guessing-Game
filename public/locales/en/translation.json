@@ -1,5 +1,6 @@
 {
     "about": "About this game",
+    "gameName": "Word Guessing Game - {{language}}",
     "enterKey": "Enter",
     "deleteKey": "Delete",
     "notEnoughLetters": "Not enough letters",
@@ -20,29 +21,82 @@
     "bestStreak": "Best streak",
     "newWordCountdown": "New word in",
     "share": "Share",
-    "firstExampleWord": [
-        "W",
-        "E",
-        "A",
-        "R",
-        "Y"
+    "winMessages": [
+        "Ko'o!",
+        "Awesome",
+        "Lapu!"
     ],
-    "secondExampleWord": [
-        "P",
-        "I",
-        "L",
-        "O",
-        "T"
+    "firstExampleWord": [{
+            "letter": "W",
+            "highlight": true
+        },
+        {
+            "letter": "E",
+            "highlight": false
+        },
+        {
+            "letter": "A",
+            "highlight": false
+        },
+        {
+            "letter": "R",
+            "highlight": false
+        },
+        {
+            "letter": "Y",
+            "highlight": false
+        }
     ],
-    "thirdExampleWord": [
-        "V",
-        "A",
-        "G",
-        "U",
-        "E"
+    "secondExampleWord": [{
+            "letter": "P",
+            "highlight": false
+        },
+        {
+            "letter": "I",
+            "highlight": false
+        },
+        {
+            "letter": "L",
+            "highlight": true
+        },
+        {
+            "letter": "O",
+            "highlight": false
+        },
+        {
+            "letter": "T",
+            "highlight": false
+        }
     ],
-    "aboutAuthorSentence": "This is an open source clone of the game Wordle adapted to {{language}} by <3>{{author}}</3>. ",
+    "thirdExampleWord": [{
+            "letter": "V",
+            "highlight": false
+        },
+        {
+            "letter": "A",
+            "highlight": false
+        },
+        {
+            "letter": "G",
+            "highlight": false
+        },
+        {
+            "letter": "U",
+            "highlight": true
+        },
+        {
+            "letter": "E",
+            "highlight": false
+        }
+    ],
+    "aboutAuthorSentence": "This is an open source word guessing game adapted to {{language}} by <3>{{author}}</3>. ",
     "aboutCodeSentence": "Check out <1>the original code</1> by <3>Hannah Park</3> or have a look at <5>Aidan Pine's fork</5> and customize it for another language! ",
     "aboutDataSentence": "The words for this game were sourced from <1>{{wordListSource}}</1>. ",
-    "aboutOriginalSentence": "You can also play the original  <1>here</1>"
+    "aboutOriginalSentence": "You can also play the original  <1>here</1>",
+    "languages": {
+        "en": "English",
+        "es": "Español",
+        "sw": "Kiswahili",
+        "zh": "中文"
+    }
 }

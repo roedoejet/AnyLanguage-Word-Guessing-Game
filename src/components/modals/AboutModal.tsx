@@ -16,30 +16,16 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
           i18nKey="aboutAuthorSentence"
           values={{ language: CONFIG.language, author: CONFIG.author }}
         >
-          This is an open source clone of the game Wordle adapted to
+          This is an open source word guessing game adapted to
           {CONFIG.language} by
           <a href={CONFIG.authorWebsite} className="underline font-bold">
             {CONFIG.author}
           </a>{' '}
         </Trans>
         <Trans i18nKey="aboutCodeSentence">
-          Check out
+          Have a look at
           <a
-            href="https://github.com/hannahcode/wordle"
-            className="underline font-bold"
-          >
-            the original code
-          </a>
-          by
-          <a
-            href="https://www.hannahmariepark.com/"
-            className="underline font-bold"
-          >
-            Hannah Park
-          </a>
-          or have a look at
-          <a
-            href="https://github.com/roedoejet/AnyLanguage-Wordle"
+            href="https://github.com/roedoejet/AnyLanguage-Word-Guessing-Game"
             className="underline font-bold"
           >
             Aidan Pine's fork

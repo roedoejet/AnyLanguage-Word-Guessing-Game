@@ -1,0 +1,102 @@
+{
+    "about": "Habari ya mchezo huu",
+    "gameName": "Si Game - {{language}}",
+    "enterKey": "Ingiza",
+    "deleteKey": "Futa",
+    "notEnoughLetters": "Herufi ni ndogo",
+    "wordNotFound": "Neno haionekani",
+    "solution": "Neno ni {{solution}}",
+    "gameCopied": "Umenakili mchezo",
+    "howToPlay": "Elezo za kucheza",
+    "instructions": "Bahitisha neno kwa mara {{tries}}. Baada ya bahitisho, rangi wa mraba itageuza kuonekana kama bahitisho iko karibu na neno sahihi.",
+    "pickYourLanguage": "Chagua lugha",
+    "correctSpotInstructions": "Herufi M iko kwa neno, na iko pahali sahihi.",
+    "wrongSpotInstructions": "Herufi U iko kwa neno, lakini pahali si sahihi.",
+    "notInWordInstructions": "Herufi U haiko kwa neno, pahali yoyote.",
+    "guessDistribution": "Usambazaji wa kubahatisha",
+    "statistics": "Takwimu",
+    "totalTries": "Mara ya kujaribu",
+    "successRate": "Kiwango ya kushinda",
+    "currentStreak": "Mara ya kushinda moja kwa moja",
+    "bestStreak": "Mara bora ya kushinda moja kwa moja",
+    "newWordCountdown": "Mchezo mpya kwa",
+    "share": "Gawana",
+    "winMessages": [
+        "Hongera!",
+        "Makofi",
+        "Pongezi!"
+    ],
+    "firstExampleWord": [{
+            "letter": "M",
+            "highlight": true
+        },
+        {
+            "letter": "B",
+            "highlight": false
+        },
+        {
+            "letter": "I",
+            "highlight": false
+        },
+        {
+            "letter": "L",
+            "highlight": false
+        },
+        {
+            "letter": "I",
+            "highlight": false
+        }
+    ],
+    "secondExampleWord": [{
+            "letter": "M",
+            "highlight": false
+        },
+        {
+            "letter": "B",
+            "highlight": false
+        },
+        {
+            "letter": "U",
+            "highlight": true
+        },
+        {
+            "letter": "Z",
+            "highlight": false
+        },
+        {
+            "letter": "I",
+            "highlight": false
+        }
+    ],
+    "thirdExampleWord": [{
+            "letter": "G",
+            "highlight": false
+        },
+        {
+            "letter": "E",
+            "highlight": false
+        },
+        {
+            "letter": "U",
+            "highlight": true
+        },
+        {
+            "letter": "Z",
+            "highlight": false
+        },
+        {
+            "letter": "A",
+            "highlight": false
+        }
+    ],
+    "aboutAuthorSentence": "Programmu hii ni toleo huru na wazi wa mchezo Game, imetafsiri kwa {{language}} ni <3>{{author}}</3>. ",
+    "aboutCodeSentence": "Angalia <1>programmu</1> ya kwanza iliandikwa ni <3>Hannah Park</3> au angalia <5>mageuzi ya Aidan Pine</5> na ongeza lugha ingine! ",
+    "aboutDataSentence": "Neno za mchezo huu zilitoa kutoka <1>{{wordListSource}}</1>. ",
+    "aboutOriginalSentence": "Unaweza kucheza mchezo awali <1>hapa</1>",
+    "languages": {
+        "en": "English",
+        "es": "Español",
+        "sw": "Kiswahili",
+        "zh": "中文"
+    }
+}
