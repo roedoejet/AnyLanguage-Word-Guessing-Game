@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/AnyLanguage-Wordle/static/css/main.151a03bd.css",
-    "main.js": "/AnyLanguage-Wordle/static/js/main.b311dcfc.js",
-    "static/js/787.9fd50364.chunk.js": "/AnyLanguage-Wordle/static/js/787.9fd50364.chunk.js",
-    "static/media/BCSans-Bold.woff": "/AnyLanguage-Wordle/static/media/BCSans-Bold.252ecf87ea37c93b293c.woff",
-    "static/media/BCSans-BoldItalic.woff": "/AnyLanguage-Wordle/static/media/BCSans-BoldItalic.73ed5137b2c4a42b754f.woff",
-    "static/media/BCSans-Italic.woff": "/AnyLanguage-Wordle/static/media/BCSans-Italic.9c3be03a06d30a6ecff0.woff",
-    "static/media/BCSans-Regular.woff": "/AnyLanguage-Wordle/static/media/BCSans-Regular.0079ea8e42d4e81a13d2.woff",
-    "index.html": "/AnyLanguage-Wordle/index.html",
-    "static/media/getFetch.cjs": "/AnyLanguage-Wordle/static/media/getFetch.c780682470504fffbd04.cjs",
-    "main.151a03bd.css.map": "/AnyLanguage-Wordle/static/css/main.151a03bd.css.map",
-    "main.b311dcfc.js.map": "/AnyLanguage-Wordle/static/js/main.b311dcfc.js.map",
-    "787.9fd50364.chunk.js.map": "/AnyLanguage-Wordle/static/js/787.9fd50364.chunk.js.map"
+    "main.css": "/AnyLanguage-Word-Guessing-Game/static/css/main.0e799fdc.css",
+    "main.js": "/AnyLanguage-Word-Guessing-Game/static/js/main.946048b0.js",
+    "static/js/787.f0fc0331.chunk.js": "/AnyLanguage-Word-Guessing-Game/static/js/787.f0fc0331.chunk.js",
+    "static/media/BCSans-Bold.woff": "/AnyLanguage-Word-Guessing-Game/static/media/BCSans-Bold.252ecf87ea37c93b293c.woff",
+    "static/media/BCSans-BoldItalic.woff": "/AnyLanguage-Word-Guessing-Game/static/media/BCSans-BoldItalic.73ed5137b2c4a42b754f.woff",
+    "static/media/BCSans-Italic.woff": "/AnyLanguage-Word-Guessing-Game/static/media/BCSans-Italic.9c3be03a06d30a6ecff0.woff",
+    "static/media/BCSans-Regular.woff": "/AnyLanguage-Word-Guessing-Game/static/media/BCSans-Regular.0079ea8e42d4e81a13d2.woff",
+    "index.html": "/AnyLanguage-Word-Guessing-Game/index.html",
+    "static/media/getFetch.cjs": "/AnyLanguage-Word-Guessing-Game/static/media/getFetch.c780682470504fffbd04.cjs",
+    "main.0e799fdc.css.map": "/AnyLanguage-Word-Guessing-Game/static/css/main.0e799fdc.css.map",
+    "main.946048b0.js.map": "/AnyLanguage-Word-Guessing-Game/static/js/main.946048b0.js.map",
+    "787.f0fc0331.chunk.js.map": "/AnyLanguage-Word-Guessing-Game/static/js/787.f0fc0331.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.151a03bd.css",
-    "static/js/main.b311dcfc.js"
+    "static/css/main.0e799fdc.css",
+    "static/js/main.946048b0.js"
   ]
 }
