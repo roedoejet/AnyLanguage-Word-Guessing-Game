@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/AnyLanguage-Word-Guessing-Game/static/css/main.0e799fdc.css",
-    "main.js": "/AnyLanguage-Word-Guessing-Game/static/js/main.946048b0.js",
+    "main.css": "/AnyLanguage-Word-Guessing-Game/static/css/main.35049ab9.css",
+    "main.js": "/AnyLanguage-Word-Guessing-Game/static/js/main.25b8201f.js",
     "static/js/787.f0fc0331.chunk.js": "/AnyLanguage-Word-Guessing-Game/static/js/787.f0fc0331.chunk.js",
     "static/media/BCSans-Bold.woff": "/AnyLanguage-Word-Guessing-Game/static/media/BCSans-Bold.252ecf87ea37c93b293c.woff",
     "static/media/BCSans-BoldItalic.woff": "/AnyLanguage-Word-Guessing-Game/static/media/BCSans-BoldItalic.73ed5137b2c4a42b754f.woff",
@@ -9,12 +9,12 @@
     "static/media/BCSans-Regular.woff": "/AnyLanguage-Word-Guessing-Game/static/media/BCSans-Regular.0079ea8e42d4e81a13d2.woff",
     "index.html": "/AnyLanguage-Word-Guessing-Game/index.html",
     "static/media/getFetch.cjs": "/AnyLanguage-Word-Guessing-Game/static/media/getFetch.c780682470504fffbd04.cjs",
-    "main.0e799fdc.css.map": "/AnyLanguage-Word-Guessing-Game/static/css/main.0e799fdc.css.map",
-    "main.946048b0.js.map": "/AnyLanguage-Word-Guessing-Game/static/js/main.946048b0.js.map",
+    "main.35049ab9.css.map": "/AnyLanguage-Word-Guessing-Game/static/css/main.35049ab9.css.map",
+    "main.25b8201f.js.map": "/AnyLanguage-Word-Guessing-Game/static/js/main.25b8201f.js.map",
     "787.f0fc0331.chunk.js.map": "/AnyLanguage-Word-Guessing-Game/static/js/787.f0fc0331.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e799fdc.css",
-    "static/js/main.946048b0.js"
+    "static/css/main.35049ab9.css",
+    "static/js/main.25b8201f.js"
   ]
 }
