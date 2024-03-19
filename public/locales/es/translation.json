@@ -1,102 +1,101 @@
 {
-    "about": "Acerca de este juego",
-    "gameName": "No Juego - {{language}}",
-    "enterKey": "Enviar",
-    "deleteKey": "Eliminar",
-    "notEnoughLetters": "No hay suficientes letras",
-    "wordNotFound": "Palabra no encontrada",
-    "solution": "La palabra era {{solution}}",
-    "gameCopied": "Juego copiado al portapapeles",
-    "howToPlay": "Cómo jugar",
-    "instructions": "Adivina la palabra en {{tries}} intentos. Después de cada intento, el color de las letras cambiará para mostrar qué tan cerca estás de acertar la palabra.",
-    "pickYourLanguage": "Elige un idioma",
-    "correctSpotInstructions": "La letra T se encuentra en la palabra y está en la posición correcta.",
-    "wrongSpotInstructions": "La letra N se encuentra en la palabra pero en la posición incorrecta.",
-    "notInWordInstructions": "La letra O no se encuentra en la palabra.",
-    "guessDistribution": "Distribución de aciertos",
-    "statistics": "Estadísticas",
-    "totalTries": "Jugadas",
-    "successRate": "Victorias",
-    "currentStreak": "Racha actual",
-    "bestStreak": "Mejor racha",
-    "newWordCountdown": "Nueva palabra en",
-    "share": "Compartir",
-    "winMessages": [
-        "¡Gran trabajo!",
-        "Increíble",
-        "¡Bien hecho!"
-    ],
-    "firstExampleWord": [{
-            "letter": "T",
-            "highlight": true
-        },
-        {
-            "letter": "R",
-            "highlight": false
-        },
-        {
-            "letter": "A",
-            "highlight": false
-        },
-        {
-            "letter": "M",
-            "highlight": false
-        },
-        {
-            "letter": "O",
-            "highlight": false
-        }
-    ],
-    "secondExampleWord": [{
-            "letter": "G",
-            "highlight": false
-        },
-        {
-            "letter": "A",
-            "highlight": false
-        },
-        {
-            "letter": "N",
-            "highlight": true
-        },
-        {
-            "letter": "A",
-            "highlight": false
-        },
-        {
-            "letter": "S",
-            "highlight": false
-        }
-    ],
-    "thirdExampleWord": [{
-            "letter": "R",
-            "highlight": false
-        },
-        {
-            "letter": "E",
-            "highlight": false
-        },
-        {
-            "letter": "T",
-            "highlight": false
-        },
-        {
-            "letter": "O",
-            "highlight": true
-        },
-        {
-            "letter": "S",
-            "highlight": false
-        }
-    ],
-    "aboutAuthorSentence": "Este es un clon de código abierto del juego Game adaptado a {{language}} por <3>{{author}}</3>. ",
-    "aboutCodeSentence": "Echa un vistazo al <1>código original</1> de <3>Hannah Park</3> o echa un vistazo al <5>fork de Aidan Pine</5> y personalízalo para otro idioma. ",
-    "aboutDataSentence": "Las palabras para este juego se obtuvieron de <1>{{wordListSource}}</1>. ",
-    "aboutOriginalSentence": "También puedes jugar la original <1>aquí</1>",
-    "languages": {
-        "en": "English",
-        "es": "Español",
-        "sw": "Kiswahili",
-        "zh": "中文"
+  "about": "Acerca de este juego",
+  "gameName": "No Juego - {{language}}",
+  "enterKey": "Enviar",
+  "deleteKey": "Eliminar",
+  "notEnoughLetters": "No hay suficientes letras",
+  "wordNotFound": "Palabra no encontrada",
+  "solution": "La palabra era {{solution}}",
+  "gameCopied": "Juego copiado al portapapeles",
+  "howToPlay": "Cómo jugar",
+  "instructions": "Adivina la palabra en {{tries}} intentos. Después de cada intento, el color de las letras cambiará para mostrar qué tan cerca estás de acertar la palabra.",
+  "pickYourLanguage": "Elige un idioma",
+  "correctSpotInstructions": "La letra T se encuentra en la palabra y está en la posición correcta.",
+  "wrongSpotInstructions": "La letra N se encuentra en la palabra pero en la posición incorrecta.",
+  "notInWordInstructions": "La letra O no se encuentra en la palabra.",
+  "guessDistribution": "Distribución de aciertos",
+  "statistics": "Estadísticas",
+  "totalTries": "Jugadas",
+  "successRate": "Victorias",
+  "currentStreak": "Racha actual",
+  "bestStreak": "Mejor racha",
+  "newWordCountdown": "Nueva palabra en",
+  "share": "Compartir",
+  "winMessages": ["¡Gran trabajo!", "Increíble", "¡Bien hecho!"],
+  "firstExampleWord": [
+    {
+      "letter": "T",
+      "highlight": true
+    },
+    {
+      "letter": "R",
+      "highlight": false
+    },
+    {
+      "letter": "A",
+      "highlight": false
+    },
+    {
+      "letter": "M",
+      "highlight": false
+    },
+    {
+      "letter": "O",
+      "highlight": false
     }
+  ],
+  "secondExampleWord": [
+    {
+      "letter": "G",
+      "highlight": false
+    },
+    {
+      "letter": "A",
+      "highlight": false
+    },
+    {
+      "letter": "N",
+      "highlight": true
+    },
+    {
+      "letter": "A",
+      "highlight": false
+    },
+    {
+      "letter": "S",
+      "highlight": false
+    }
+  ],
+  "thirdExampleWord": [
+    {
+      "letter": "R",
+      "highlight": false
+    },
+    {
+      "letter": "E",
+      "highlight": false
+    },
+    {
+      "letter": "T",
+      "highlight": false
+    },
+    {
+      "letter": "O",
+      "highlight": true
+    },
+    {
+      "letter": "S",
+      "highlight": false
+    }
+  ],
+  "aboutAuthorSentence": "Este es un clon de código abierto del juego Word-Guessing-Game adaptado a {{language}} por <3>{{author}}</3>. ",
+  "aboutCodeSentence": "Echa un vistazo al <1>código original</1> de <3>Hannah Park</3> o echa un vistazo al <5>fork de Aidan Pine</5> y personalízalo para otro idioma. ",
+  "aboutDataSentence": "Las palabras para este juego se obtuvieron de <1>{{wordListSource}}</1>. ",
+  "aboutOriginalSentence": "También puedes jugar la original <1>aquí</1>",
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "sw": "Kiswahili",
+    "zh": "中文"
+  }
 }
