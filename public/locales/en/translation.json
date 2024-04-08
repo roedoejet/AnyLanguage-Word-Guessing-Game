@@ -1,102 +1,101 @@
 {
-    "about": "About this game",
-    "gameName": "Tunica Yanashimi",
-    "enterKey": "Enter",
-    "deleteKey": "Delete",
-    "notEnoughLetters": "Not enough letters",
-    "wordNotFound": "Word not found",
-    "solution": "The word was {{solution}}",
-    "gameCopied": "Game copied to clipboard",
-    "howToPlay": "How to play",
-    "instructions": "Guess the word in {{tries}} tries. After each guess, the color of the tiles will change to show how close your guess was to the word.",
-    "pickYourLanguage": "Choose a language",
-    "correctSpotInstructions": "The letter W is in the word and in the correct spot.",
-    "wrongSpotInstructions": "The letter L is in the word but in the wrong spot.",
-    "notInWordInstructions": "The letter U is not in the word in any spot.",
-    "guessDistribution": "Guess Distribution",
-    "statistics": "Statistics",
-    "totalTries": "Total tries",
-    "successRate": "Success rate",
-    "currentStreak": "Current streak",
-    "bestStreak": "Best streak",
-    "newWordCountdown": "New word in",
-    "share": "Share",
-    "winMessages": [
-        "Ko'o!",
-        "Awesome",
-        "Lapu!"
-    ],
-    "firstExampleWord": [{
-            "letter": "W",
-            "highlight": true
-        },
-        {
-            "letter": "E",
-            "highlight": false
-        },
-        {
-            "letter": "A",
-            "highlight": false
-        },
-        {
-            "letter": "R",
-            "highlight": false
-        },
-        {
-            "letter": "Y",
-            "highlight": false
-        }
-    ],
-    "secondExampleWord": [{
-            "letter": "P",
-            "highlight": false
-        },
-        {
-            "letter": "I",
-            "highlight": false
-        },
-        {
-            "letter": "L",
-            "highlight": true
-        },
-        {
-            "letter": "O",
-            "highlight": false
-        },
-        {
-            "letter": "T",
-            "highlight": false
-        }
-    ],
-    "thirdExampleWord": [{
-            "letter": "V",
-            "highlight": false
-        },
-        {
-            "letter": "A",
-            "highlight": false
-        },
-        {
-            "letter": "G",
-            "highlight": false
-        },
-        {
-            "letter": "U",
-            "highlight": true
-        },
-        {
-            "letter": "E",
-            "highlight": false
-        }
-    ],
-    "aboutAuthorSentence": "This is an open source word guessing game adapted to {{language}} by <3>{{author}}</3>. ",
-    "aboutCodeSentence": "Check out <1>the original code</1> by <3>Hannah Park</3> or have a look at <5>Aidan Pine's fork</5> and customize it for another language! ",
-    "aboutDataSentence": "The words for this game were sourced from <1>{{wordListSource}}</1>. ",
-    "aboutOriginalSentence": "You can also play the original  <1>here</1>",
-    "languages": {
-        "en": "English",
-        "es": "Español",
-        "sw": "Kiswahili",
-        "zh": "中文"
+  "about": "About this game",
+  "gameName": "Tunica Yanashimi",
+  "enterKey": "Enter",
+  "deleteKey": "Delete",
+  "notEnoughLetters": "Not enough letters",
+  "wordNotFound": "Word not found",
+  "solution": "The word was {{solution}}",
+  "gameCopied": "Game copied to clipboard",
+  "howToPlay": "How to play",
+  "instructions": "Guess the word in {{tries}} tries. After each guess, the color of the tiles will change to show how close your guess was to the word.",
+  "pickYourLanguage": "Choose a language",
+  "correctSpotInstructions": "The letter W is in the word and in the correct spot.",
+  "wrongSpotInstructions": "The letter O is in the word but in the wrong spot.",
+  "notInWordInstructions": "The letter H is not in the word in any spot.",
+  "guessDistribution": "Guess Distribution",
+  "statistics": "Statistics",
+  "totalTries": "Total tries",
+  "successRate": "Success rate",
+  "currentStreak": "Current streak",
+  "bestStreak": "Best streak",
+  "newWordCountdown": "New word in",
+  "share": "Share",
+  "winMessages": ["Ko'o!", "Awesome", "Lapu!"],
+  "firstExampleWord": [
+    {
+      "letter": "W",
+      "highlight": true
+    },
+    {
+      "letter": "A",
+      "highlight": false
+    },
+    {
+      "letter": "C",
+      "highlight": false
+    },
+    {
+      "letter": "H",
+      "highlight": false
+    },
+    {
+      "letter": "I",
+      "highlight": false
     }
+  ],
+  "secondExampleWord": [
+    {
+      "letter": "C",
+      "highlight": false
+    },
+    {
+      "letter": "H",
+      "highlight": false
+    },
+    {
+      "letter": "O",
+      "highlight": true
+    },
+    {
+      "letter": "M",
+      "highlight": false
+    },
+    {
+      "letter": "U",
+      "highlight": false
+    }
+  ],
+  "thirdExampleWord": [
+    {
+      "letter": "K",
+      "highlight": false
+    },
+    {
+      "letter": "O",
+      "highlight": false
+    },
+    {
+      "letter": "C",
+      "highlight": false
+    },
+    {
+      "letter": "H",
+      "highlight": true
+    },
+    {
+      "letter": "U",
+      "highlight": false
+    }
+  ],
+  "aboutAuthorSentence": "This is an open source word guessing game adapted to {{language}} by <3>{{author}}</3>. ",
+  "aboutCodeSentence": "Check out <1>the original code</1> by <3>Hannah Park</3> or have a look at <5>Aidan Pine's fork</5> and customize it for another language! ",
+  "aboutDataSentence": "The words for this game were sourced from <1>{{wordListSource}}</1>. ",
+  "aboutOriginalSentence": "You can also play the original  <1>here</1>",
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "sw": "Kiswahili",
+    "zh": "中文"
+  }
 }
