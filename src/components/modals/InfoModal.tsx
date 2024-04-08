@@ -25,6 +25,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
   const thirdExampleWord: Letter[] = t('thirdExampleWord', {
     returnObjects: true,
   })
+
   return (
     <BaseModal title={t('howToPlay')} isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-gray-500">

@@ -160,6 +160,14 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
           onClick={() => setIsStatsModalOpen(true)}
         />
       </div>
+      <div className="flex w-80 mx-auto items-center mb-8">
+        <h3 className="text-sm text-gray-500">
+          {t('dictionarySentence', { language: CONFIG.language })}
+          <a href={CONFIG.wordListSourceLink} className="underline">
+            _{CONFIG.wordListSource}_
+          </a>
+        </h3>
+      </div>
       <Grid guesses={guesses} currentGuess={currentGuess} />
       <Keyboard
         onChar={onChar}

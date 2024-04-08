@@ -88,9 +88,10 @@
       "highlight": false
     }
   ],
+  "dictionarySentence": "Unatafuta maneno?",
   "aboutAuthorSentence": "Programmu hii ni toleo huru na wazi wa mchezo Word-Guessing-Game, imetafsiri kwa {{language}} ni <3>{{author}}</3>. ",
   "aboutCodeSentence": "Angalia <1>programmu</1> ya kwanza iliandikwa ni <3>Hannah Park</3> au angalia <5>mageuzi ya Aidan Pine</5> na ongeza lugha ingine! ",
-  "aboutDataSentence": "Neno za mchezo huu zilitoa kutoka <1>{{wordListSource}}</1>. "
+  "aboutDataSentence": "Neno za mchezo huu zilitoa kutoka <1>{{wordListSource}}</1>. ",
   "languages": {
     "en": "English",
     "es": "Español",
