@@ -90,8 +90,7 @@
   ],
   "aboutAuthorSentence": "This is an open source word guessing game adapted to {{language}} by <3>{{author}}</3>. ",
   "aboutCodeSentence": "Check out <1>the original code</1> by <3>Hannah Park</3> or have a look at <5>Aidan Pine's fork</5> and customize it for another language! ",
-  "aboutDataSentence": "The words for this game were sourced from <1>{{wordListSource}}</1>. ",
-  "aboutOriginalSentence": "You can also play the original  <1>here</1>",
+  "aboutDataSentence": "The words for this game were sourced from <1>{{wordListSource}}</1>. "
   "languages": {
     "en": "English",
     "es": "Español",
