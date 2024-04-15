@@ -36,8 +36,12 @@ export const addStatsForCompletedGame = (
   return stats
 }
 
+function createZeroArray(length: number): number[] {
+  return Array(length).fill(0);
+}
+
 const defaultStats: GameStats = {
-  winDistribution: [0, 0, 0, 0, 0, 0],
+  winDistribution: createZeroArray(CONFIG.tries),
   gamesFailed: 0,
   currentStreak: 0,
   bestStreak: 0,
